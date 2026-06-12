@@ -21,8 +21,17 @@
       }
     ]
   },
+  "quienes_somos": {
+    "titulo": "Quiénes Somos",
+    "subtitulo": "Especialistas en infraestructura digital y soluciones desacopladas.",
+    "historia": "DevNod-INC nació como una iniciativa para responder a la creciente necesidad de sistemas estáticos de alta velocidad, arquitecturas JAMstack y automatizaciones CI/CD corporativas. Nos enfocamos en eliminar la complejidad innecesaria, entregando soluciones planas que garantizan redundancia y seguridad blindada.",
+    "valores": [
+      { "concepto": "Transparencia Técnica", "definición": "Código abierto a auditorías, sin cajas negras ni dependencias ocultas." },
+      { "concepto": "Automatización Absoluta", "definición": "Si un proceso se repite más de dos veces, se automatiza mediante pipelines integrados." },
+      { "concepto": "Arquitectura Limpia", "definición": "Desacoplamiento estricto entre los datos, la lógica del cliente y el servidor." }
+    ]
+  },
   "organizacion": {
-    "quienes_somos": "Somos un nodo de ingeniería especializado en el desarrollo y despliegue de soluciones de software altamente complejas...",
     "mision": "Diseñar e implementar arquitecturas robustas y escalables que resuelvan problemas críticos...",
     "vision": "Convertirnos en el referente tecnológico para la automatización y gestión de infraestructuras complejas...",
     "politica": "Garantizar la alta disponibilidad, seguridad de la información y optimización de recursos en cada línea de código desplegada."
