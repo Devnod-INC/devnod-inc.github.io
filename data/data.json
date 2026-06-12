@@ -37,8 +37,24 @@
     "vision_titulo": "Nuestra Visión",
     "vision_texto": "Establecer un estándar de desarrollo limpio y transparente, demostrando que la redundancia estática, el procesamiento asíncrono y las arquitecturas serverless son las llaves para sistemas invulnerables, escalables y libres de mantenimiento costoso."
   },
-  "organizacion": {
-    "politica": "Garantizar la alta disponibilidad, seguridad de la información y optimización de recursos en cada línea de código desplegada."
+  {
+  "politica": {
+    "titulo": "Políticas de Cumplimiento y Resolución",
+    "intro": "En DevNod-INC, la seguridad no es una opción, es la base de nuestra arquitectura.",
+    "secciones": [
+      {
+        "titulo": "Ciberseguridad (Marco Legal Chileno)",
+        "contenido": "Cumplimos estrictamente con la Ley 21.459 sobre Delitos Informáticos y los estándares de la CSIRT nacional, garantizando la integridad de los datos mediante cifrado de grado industrial y auditorías constantes."
+      },
+      {
+        "titulo": "Protección de Datos Personales",
+        "contenido": "Basados en la Ley 19.628, el tratamiento de información sensible sigue protocolos de minimización y anonimización de datos, asegurando que solo el personal autorizado acceda a información crítica."
+      },
+      {
+        "titulo": "Protocolo de Resolución de Incidencias",
+        "contenido": "Ante cualquier vulnerabilidad, activamos nuestro protocolo de respuesta inmediata (Incident Response Plan), priorizando la contención, mitigación y notificación a los actores relevantes en un tiempo récord."
+      }
+    ]
   },
   "tecnologia": {
     "arquitectura": "JAMstack (JavaScript, APIs, Markup)",
