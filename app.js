@@ -114,11 +114,26 @@ function inicializarQuienesSomos() {
         .then(res => res.json())
         .then(data => {
             const info = data.quienes_somos;
-            document.getElementById('about-title').innerText = info.titulo;
-            document.getElementById('about-story').innerText = info.historia;
-            document.getElementById('values-container').innerHTML = info.valores.map(v => `
-                <div class="value-card"><h4>${v.concepto}</h4><p>${v.definición}</p></div>`).join('');
-        });
+            
+            // Actualización de encabezados
+            const titleEl = document.getElementById('about-title');
+            const subtitleEl = document.getElementById('about-subtitle');
+            const storyEl = document.getElementById('about-story');
+            const valuesEl = document.getElementById('values-container');
+
+            if (titleEl) titleEl.innerText = info.titulo;
+            if (subtitleEl) subtitleEl.innerText = info.subtitulo;
+            if (storyEl) storyEl.innerText = info.historia;
+            
+            if (valuesEl && info.valores) {
+                valuesEl.innerHTML = info.valores.map(v => `
+                    <div class="value-card">
+                        <h4>${v.concepto}</h4>
+                        <p>${v.definición}</p>
+                    </div>`).join('');
+            }
+        })
+        .catch(err => console.error("Error en sincronización de componentes:", err));
 }
 
 function inicializarMisionVision() {
