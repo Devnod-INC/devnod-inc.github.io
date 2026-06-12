@@ -1,0 +1,146 @@
+[
+  {
+    "source": "sophos_threat",
+    "title": "You do surprise me.exe: An unexpected executable in Hola Browser",
+    "link": "https://www.sophos.com/en-us/blog/you-do-surprise-me-exe-an-unexpected-executable-in-hola-browser",
+    "date": "Thu, 04 Jun 2026 00:00:00 GMT"
+  },
+  {
+    "source": "sophos_threat",
+    "title": "Pointing a Cursor at evading detection",
+    "link": "https://www.sophos.com/en-us/blog/pointing-a-cursor-at-evading-detection",
+    "date": "Tue, 02 Jun 2026 00:00:00 GMT"
+  },
+  {
+    "source": "sophos_threat",
+    "title": "GitHub internal repositories breached",
+    "link": "https://www.sophos.com/en-us/blog/github-internal-repositories-breached",
+    "date": "Wed, 20 May 2026 00:00:00 GMT"
+  },
+  {
+    "source": "sophos_ops",
+    "title": "Strengthening authentication with passkeys: A CISO playbook",
+    "link": "https://www.sophos.com/en-us/blog/strengthening-authentication-with-passkeys-a-ciso-playbook",
+    "date": "Wed, 22 Apr 2026 00:00:00 GMT"
+  },
+  {
+    "source": "sophos_ops",
+    "title": "Cyber Advisory: Increased Cyber Risk Amid U.S.–Israel–Iran Escalation",
+    "link": "https://www.sophos.com/en-us/blog/cyber-advisory-increased-cyber-risk-amid-u-s-israel-iran-escalation",
+    "date": "Sun, 01 Mar 2026 00:00:00 GMT"
+  },
+  {
+    "source": "sophos_ops",
+    "title": "The Active Adversary Report: Safety in numbers",
+    "link": "https://www.sophos.com/en-us/blog/the-active-adversary-report-safety-in-numbers",
+    "date": "Tue, 24 Feb 2026 00:00:00 GMT"
+  },
+  {
+    "source": "aws_news",
+    "title": "Amazon Quick now integrates with Snowflake Cortex AI",
+    "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-quick-snowflake-cortex-ai/",
+    "date": "Thu, 11 Jun 2026 22:02:00 GMT"
+  },
+  {
+    "source": "aws_news",
+    "title": "Amazon CloudWatch Application Signals now supports infrastructure, logs, and traces context for faster troubleshooting",
+    "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-application-signals-supports infrastructure-logs-traces-context-for-faster troubleshooting/",
+    "date": "Thu, 11 Jun 2026 20:10:00 GMT"
+  },
+  {
+    "source": "aws_news",
+    "title": "Amazon Aurora now supports PostgreSQL major version 18",
+    "link": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-aurora-postgresql-major-version-18/",
+    "date": "Thu, 11 Jun 2026 18:59:00 GMT"
+  },
+  {
+    "source": "gcp_cloud",
+    "title": "The latest AI news we announced in May 2026",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/",
+    "date": "Fri, 05 Jun 2026 14:45:00 +0000"
+  },
+  {
+    "source": "gcp_cloud",
+    "title": "A new experiment brings better group meetings to Google Beam",
+    "link": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-group-meetings/",
+    "date": "Wed, 20 May 2026 16:45:00 +0000"
+  },
+  {
+    "source": "gcp_cloud",
+    "title": "Making it easier to understand how content was created and edited",
+    "link": "https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/",
+    "date": "Tue, 19 May 2026 17:45:00 +0000"
+  },
+  {
+    "source": "suse_news",
+    "title": "SUSE at GITEX AI Europe 2026: Empowering Sovereign Digital Transformation and Enterprise AI",
+    "link": "https://www.suse.com/c/suse-at-gitex-ai-europe-2026-empowering-sovereign-digital-transformation-and-enterprise-ai/",
+    "date": "Fri, 12 Jun 2026 07:09:17 +0000"
+  },
+  {
+    "source": "suse_news",
+    "title": "Driving 5G-Advanced and Open RAN Excellence: SUSE Telco Cloud on AMD EPYC 9005 Series Processors",
+    "link": "https://www.suse.com/c/driving-5g-advanced-and-open-ran-excellence-suse-telco-cloud-on-amd-epyc-9005-series-processors/",
+    "date": "Thu, 11 Jun 2026 11:15:08 +0000"
+  },
+  {
+    "source": "suse_news",
+    "title": "SUSE at DTW Ignite 2026: Accelerating Telco Modernization",
+    "link": "https://www.suse.com/c/suse-at-dtw-ignite-2026-accelerating-telco-modernization/",
+    "date": "Wed, 10 Jun 2026 18:19:53 +0000"
+  },
+  {
+    "source": "broadcom_vmware",
+    "title": "VCF Breakroom Chats Episode 89 – Governing the AI Private Cloud: Deep Dive into VCF 9.1 Infrastructure Placement Policies",
+    "link": "https://blogs.vmware.com/cloud-foundation/2026/06/11/vcf-breakroom-chats-episode-89-governing-the-ai-private-cloud-deep-dive-into-vcf-9-1-infrastructure-placement-policies/",
+    "date": "Thu, 11 Jun 2026 18:13:36 +0000"
+  },
+  {
+    "source": "broadcom_vmware",
+    "title": "VCF Breakroom Chats Episode 87 – Governing the AI Private Cloud: Deep Dive into VCF 9.1 Infrastructure Placement Policies",
+    "link": "https://blogs.vmware.com/cloud-foundation/2026/06/11/vcf-breakroom-chats-episode-87-governing-the-ai-private-cloud-deep-dive-into-vcf-9-1-infrastructure-placement-policies/",
+    "date": "Thu, 11 Jun 2026 18:13:36 +0000"
+  },
+  {
+    "source": "broadcom_vmware",
+    "title": "Deploying VMware Cloud Foundation Private AI Services: Navigating Supervisor Architectures With and Without NSX",
+    "link": "https://blogs.vmware.com/cloud-foundation/2026/06/11/deploying-vmware-cloud-foundation-private-ai-services-navigating-supervisor-architectures-with-and-without-nsx/",
+    "date": "Thu, 11 Jun 2026 15:42:00 +0000"
+  },
+  {
+    "source": "veeam_intel",
+    "title": "The One-Vendor Advantage: Why Stitched-Together Backup Storage Puts You at Risk",
+    "link": "https://www.veeam.com/blog/veeam-vault-vs-wasabi.html",
+    "date": "Wed, 10 Jun 2026 15:00:00 +0000"
+  },
+  {
+    "source": "veeam_intel",
+    "title": "Why the Partner Advisory Council Matters and Why Our Partners Matter More Than Ever",
+    "link": "https://www.veeam.com/blog/emea-partner-advisory-council-2026.html",
+    "date": "Wed, 10 Jun 2026 12:13:18 +0000"
+  },
+  {
+    "source": "veeam_intel",
+    "title": "Small Business Backup Software: A Practical Evaluation Guide",
+    "link": "https://www.veeam.com/blog/small-business-backup-software.html",
+    "date": "Tue, 09 Jun 2026 13:50:07 +0000"
+  },
+  {
+    "source": "hackerrank",
+    "title": "AI Fluency Isn’t a Soft Skill. Here’s How to Actually Measure It.",
+    "link": "https://www.hackerrank.com/blog/ai-fluency-isnt-a-soft-skill-heres-how-to-actually-measure-it/",
+    "date": "Wed, 10 Jun 2026 15:59:16 +0000"
+  },
+  {
+    "source": "hackerrank",
+    "title": "What 12,885 Developers Taught Us About Building with AI",
+    "link": "https://www.hackerrank.com/blog/what-12885-developers-taught-us-about-building-with-ai/",
+    "date": "Wed, 10 Jun 2026 15:56:17 +0000"
+  },
+  {
+    "source": "hackerrank",
+    "title": "What Good Looks Like: OK vs. Good vs. Great in the Age of AI",
+    "link": "https://www.hackerrank.com/blog/what-good-looks-like-ok-vs-good-vs-great-in-the-age-of-ai/",
+    "date": "Wed, 10 Jun 2026 15:53:45 +0000"
+  }
+]
