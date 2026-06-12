@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cisco Linux Fundamentals Automation",
+    "descripcion": "Scripts de automatización y despliegue para entornos basados en Linux.",
+    "status": "Desplegado",
+    "fecha": "2026-04"
+  },
+  {
+    "id": 2,
+    "nombre": "Frontend Expert Validations",
+    "descripcion": "Componentes avanzados y modulares optimizados para el rendimiento de la interfaz.",
+    "status": "Completado",
+    "fecha": "2026-03"
+  }
+]
