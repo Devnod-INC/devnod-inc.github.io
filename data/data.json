@@ -31,9 +31,13 @@
       { "concepto": "Arquitectura Limpia", "definición": "Desacoplamiento estricto entre los datos, la lógica del cliente y el servidor." }
     ]
   },
+  "mision_vision": {
+    "mision_titulo": "Nuestra Misión",
+    "mision_texto": "Automatizar y asegurar los canales de información crítica de nuestros entornos, desplegando nodos de software desacoplados y eficientes que mitiguen la fricción operativa y garanticen estabilidad absoluta bajo cualquier escenario de carga.",
+    "vision_titulo": "Nuestra Visión",
+    "vision_texto": "Establecer un estándar de desarrollo limpio y transparente, demostrando que la redundancia estática, el procesamiento asíncrono y las arquitecturas serverless son las llaves para sistemas invulnerables, escalables y libres de mantenimiento costoso."
+  },
   "organizacion": {
-    "mision": "Diseñar e implementar arquitecturas robustas y escalables que resuelvan problemas críticos...",
-    "vision": "Convertirnos en el referente tecnológico para la automatización y gestión de infraestructuras complejas...",
     "politica": "Garantizar la alta disponibilidad, seguridad de la información y optimización de recursos en cada línea de código desplegada."
   },
   "tecnologia": {
