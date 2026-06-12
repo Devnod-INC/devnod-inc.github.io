@@ -1,51 +1,51 @@
 {
   "bienvenida": {
-    "titulo": "Arquitectura y Desarrollo para Entornos de Alta Complejidad",
-    "subtitulo": "Diseñamos nodos de software robustos, desacoplados y automatizados.",
-    "descripcion": "En DevNod-INC no creamos sitios web genéricos. Desarrollamos infraestructuras digitales preparadas para el procesamiento de flujos de datos continuos, automatización CI/CD y arquitecturas JAMstack de alto rendimiento.",
+    "titulo": "Infraestructura Digital de Alta Resiliencia",
+    "subtitulo": "Ciberseguridad Operacional y Rendimiento Crítico.",
+    "descripcion": "En DevNod-INC desarrollamos plataformas para entornos de alta complejidad. Garantizamos carga inmediata, protección de rutas mediante tokens propietarios (C++/JWT) y resiliencia total ante fallos de red o base de datos.",
     "pilares": [
-      { "icono": "⚙️", "titulo": "Automatización End-to-End", "detalle": "Despliegues e integraciones controladas estrictamente por pipelines dinámicos." },
-      { "icono": "🔒", "titulo": "Seguridad e Identidad", "detalle": "Flujos de contacto blindados mediante autenticación OAuth 2.0 verificada." },
-      { "icono": "⚡", "titulo": "Rendimiento Crítico", "detalle": "Estructuras estáticas planas distribuidas globalmente para cargas en milisegundos." }
+      { "icono": "⚙️", "titulo": "Ciberseguridad Operacional", "detalle": "Protección de rutas y gestión de identidades con tokens propietarios en C++ o JWT." },
+      { "icono": "🔒", "titulo": "Resiliencia Híbrida", "detalle": "Manejo de datos SQL/NoSQL con redundancia nativa en JSON para disponibilidad ante fallos." },
+      { "icono": "⚡", "titulo": "Rendimiento Crítico", "detalle": "Plataformas de alta velocidad funcional diseñadas para cargar en segundos bajo carga." }
     ]
   },
   "quienes_somos": {
     "titulo": "Quiénes Somos",
-    "subtitulo": "Especialistas en infraestructura digital y soluciones desacopladas.",
-    "historia": "DevNod-INC nació como una iniciativa para responder a la creciente necesidad de sistemas estáticos de alta velocidad, arquitecturas JAMstack y automatizaciones CI/CD corporativas. Nos enfocamos en eliminar la complejidad innecesaria, entregando soluciones planas que garantizan redundancia y seguridad blindada.",
+    "subtitulo": "Especialistas en continuidad operativa y blindaje digital.",
+    "historia": "DevNod-INC responde a la demanda de sistemas invulnerables. Combinamos la velocidad de arquitecturas desacopladas con el blindaje de seguridad a bajo nivel. Nuestra experiencia técnica en Java, Node.js, C++ y Python asegura que su operación no se detenga, sin importar las fallas externas.",
     "valores": [
-      { "concepto": "Transparencia Técnica", "definición": "Código abierto a auditorías, sin cajas negras ni dependencias ocultas." },
-      { "concepto": "Automatización Absoluta", "definición": "Si un proceso se repite más de dos veces, se automatiza mediante pipelines integrados." },
-      { "concepto": "Arquitectura Limpia", "definición": "Desacoplamiento estricto entre los datos, la lógica del cliente y el servidor." }
+      { "concepto": "Blindaje Nivel C++", "definición": "Gestión de seguridad y tokens mediante módulos de alto rendimiento en C++." },
+      { "concepto": "Arquitectura Híbrida", "definición": "Redundancia inteligente de datos entre SQL y NoSQL estructurado en formato JSON." },
+      { "concepto": "Operación Ininterrumpida", "definición": "Sistemas diseñados para mantener la funcionalidad crítica incluso ante caídas de conectividad." }
     ]
   },
   "mision_vision": {
     "mision_titulo": "Nuestra Misión",
-    "mision_texto": "Automatizar y asegurar los canales de información crítica de nuestros entornos, desplegando nodos de software desacoplados y eficientes que mitiguen la fricción operativa y garanticen estabilidad absoluta bajo cualquier escenario de carga.",
+    "mision_texto": "Garantizar la continuidad operativa de sistemas críticos mediante infraestructura desacoplada, seguridad avanzada y redundancia de datos ante cualquier escenario de crisis técnica.",
     "vision_titulo": "Nuestra Visión",
-    "vision_texto": "Establecer un estándar de desarrollo limpio y transparente, demostrando que la redundancia estática, el procesamiento asíncrono y las arquitecturas serverless son las llaves para sistemas invulnerables, escalables y libres de mantenimiento costoso."
+    "vision_texto": "Ser el estándar de desarrollo en plataformas de alta complejidad, donde la integridad del dato y la velocidad funcional nunca se vean comprometidas por fallos externos."
   },
   "politica": {
     "titulo": "Políticas de Cumplimiento y Resolución",
-    "intro": "En DevNod-INC, la seguridad no es una opción, es la base de nuestra arquitectura.",
+    "intro": "En DevNod-INC, la disponibilidad y la seguridad son los pilares de nuestra arquitectura.",
     "secciones": [
-      { "titulo": "Ciberseguridad (Marco Legal Chileno)", "contenido": "Cumplimos estrictamente con la Ley 21.459 sobre Delitos Informáticos y los estándares de la CSIRT nacional, garantizando la integridad de los datos mediante cifrado de grado industrial y auditorías constantes." },
-      { "titulo": "Protección de Datos Personales", "contenido": "Basados en la Ley 19.628, el tratamiento de información sensible sigue protocolos de minimización y anonimización de datos, asegurando que solo el personal autorizado acceda a información crítica." },
-      { "titulo": "Protocolo de Resolución de Incidencias", "contenido": "Ante cualquier vulnerabilidad, activamos nuestro protocolo de respuesta inmediata (Incident Response Plan), priorizando la contención, mitigación y notificación a los actores relevantes en un tiempo récord." }
+      { "titulo": "Ciberseguridad Operacional", "contenido": "Cumplimos con estándares de integridad mediante cifrado industrial y auditorías constantes en cada nodo de software desplegado." },
+      { "titulo": "Gestión de Datos Críticos", "contenido": "Protocolos de minimización y redundancia JSON, asegurando que la información sea accesible incluso ante la caída de bases de datos relacionales." },
+      { "titulo": "Protocolo de Resiliencia", "contenido": "Ante fallos de conectividad, activamos nuestra capa de persistencia local, priorizando la operatividad funcional sobre la dependencia del servidor." }
     ]
   },
   "acerca": {
     "titulo": "Stack Tecnológico y Seguridad",
-    "descripcion": "Ecosistema diseñado para la resiliencia digital y el control de flujos de datos.",
+    "descripcion": "Ecosistema de ingeniería enfocado en resiliencia, velocidad y control total.",
     "tecnologias": [
-      { "nombre": "Python", "tag": "Orquestación CI/CD", "color": "#3776ab" },
-      { "nombre": "Firebase Auth", "tag": "Google OAuth 2.0", "color": "#ffca28" },
-      { "nombre": "Formspree", "tag": "Registro de Solicitudes", "color": "#ff5722" },
-      { "nombre": "JAMstack", "tag": "Arquitectura", "color": "#f7df1e" }
+      { "nombre": "C++ / Java", "tag": "Núcleo de Seguridad", "color": "#00599c" },
+      { "nombre": "Node.js", "tag": "Orquestación de API", "color": "#8cc84b" },
+      { "nombre": "Python", "tag": "Automatización CI/CD", "color": "#3776ab" },
+      { "nombre": "SQL / NoSQL", "tag": "Redundancia Híbrida", "color": "#00758f" }
     ],
     "seguridad": {
-      "titulo": "Protección de Identidad",
-      "texto": "Implementamos Firebase Authentication para asegurar que cada interacción sea validada mediante Google, garantizando la trazabilidad y privacidad de los datos personales antes de cualquier procesamiento en nuestros pipelines."
+      "titulo": "Protección de Acceso",
+      "texto": "Implementamos protección de rutas mediante tokens (C++/JWT) y autenticación verificada, garantizando que el acceso y la trazabilidad de datos sean blindados en cada pipeline."
     }
   }
 }
