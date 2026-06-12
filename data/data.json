@@ -1,5 +1,28 @@
 [
   {
+    {
+    "bienvenida": {
+      "titulo": "Arquitectura y Desarrollo para Entornos de Alta Complejidad",
+      "subtitulo": "Diseñamos nodos de software robustos, desacoplados y automatizados.",
+      "descripcion": "En DevNod-INC no creamos sitios web genéricos. Desarrollamos infraestructuras digitales preparadas para el procesamiento de flujos de datos continuos, automatización CI/CD y arquitecturas JAMstack de alto rendimiento.",
+      "pilares": [
+        {
+          "icono": "⚙️",
+          "titulo": "Automatización End-to-End",
+          "detalle": "Despliegues e integraciones controladas estrictamente por pipelines dinámicos."
+        },
+        {
+          "icono": "🔒",
+          "titulo": "Seguridad e Identidad",
+          "detalle": "Flujos de contacto blindados mediante autenticación OAuth 2.0 verificada."
+        },
+        {
+          "icono": "⚡",
+          "titulo": "Rendimiento Crítico",
+          "detalle": "Estructuras estáticas planas distribuidas globalmente para cargas en milisegundos."
+        }
+      ]
+    },
     "organizacion": {
       "quienes_somos": "Somos un nodo de ingeniería especializado en el desarrollo y despliegue de soluciones de software altamente complejas...",
       "mision": "Diseñar e implementar arquitecturas robustas y escalables que resuelvan problemas críticos...",
