@@ -1,1 +1,108 @@
+<section class="home-hero">
+    <h2 id="hero-title" class="fade-in">...</h2>
+    <p id="hero-subtitle" class="text-muted"></p>
+    <p id="hero-description" class="hero-body"></p>
 
+    <div class="features-grid" id="features-container">
+        </div>
+
+    <div class="cta-actions">
+        <button class="btn-primary" onclick="navegarA('blog_rss')">Ver Blog de Noticias RSS</button>
+        <button class="btn-secondary" onclick="navegarA('contacto')">Iniciar Requerimiento Técnico</button>
+    </div>
+</section>
+
+<style>
+    /* Estilos específicos del componente de bienvenida */
+    .home-hero {
+        text-align: center;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .home-hero h2 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .hero-body {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #c9d1d9;
+        margin-bottom: 40px;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 45px;
+    }
+
+    .feature-card {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 25px;
+        text-align: left;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-3px);
+        border-color: #1f6feb;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+        margin: 0 0 10px 0;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .feature-card p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #8b949e;
+        line-height: 1.5;
+    }
+
+    .cta-actions {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .btn-primary {
+        background-color: #1f6feb;
+        color: white;
+        border: 1px solid rgba(240,246,252,0.1);
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .btn-primary:hover { background-color: #388bfd; }
+
+    .btn-secondary {
+        background-color: #21262d;
+        color: #c9d1d9;
+        border: 1px solid #30363d;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .btn-secondary:hover { background-color: #30363d; border-color: #8b949e; }
+</style>
