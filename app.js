@@ -1,25 +1,19 @@
-// Configuración de las rutas de nuestra SPA
 const CONTENEDOR = document.getElementById('content');
 
-// Función principal para navegar entre secciones sin recargar la página
 function navegarA(pagina) {
-    // 1. Mostrar estado de carga en el contenedor central
     CONTENEDOR.innerHTML = `<div class="loader-placeholder">Conectando con el nodo ${pagina}...</div>`;
-
-    // 2. Actualizar el estado visual del Menubar (botones activos)
     actualizarMenubar(pagina);
 
-    // 3. Ir a buscar el fragmento HTML correspondiente
-    fetch(`paginas/${pagina}.html`)
+    // Agregamos './' explícito para garantizar que busque dentro de las carpetas de tu repositorio
+    fetch(`./paginas/${pagina}.html`)
         .then(response => {
             if (!response.ok) throw new Error(`No se pudo cargar el fragmento: ${pagina}`);
             return response.text();
         })
         .then(html => {
-            // Inyectamos el HTML del componente en el contenedor central
             CONTENEDOR.innerHTML = html;
 
-            // Lógica especial: Si entramos a la 'home', vamos a alimentar sus IDs con el data.json
+            // Si es la home, gatillamos la inyección del JSON
             if (pagina === 'home') {
                 inicializarHome();
             }
@@ -33,11 +27,9 @@ function navegarA(pagina) {
         });
 }
 
-// Función para cambiar la interfaz del menú de navegación
 function actualizarMenubar(paginaActiva) {
     const botones = document.querySelectorAll('.nav-link');
     botones.forEach(boton => {
-        // Buscamos el atributo onclick para saber a qué página apunta el botón
         if (boton.getAttribute('onclick').includes(`'${paginaActiva}'`)) {
             boton.classList.add('active');
         } else {
@@ -46,19 +38,23 @@ function actualizarMenubar(paginaActiva) {
     });
 }
 
-// Función encargada de consumir el data.json e inyectarlo en la Home
 function inicializarHome() {
-    fetch('data/data.json')
-        .then(res => res.json())
+    // Aseguramos la ruta relativa al JSON con './'
+    fetch('./data/data.json')
+        .then(res => {
+            if (!res.ok) throw new Error("No se pudo leer data.json");
+            return res.json();
+        })
         .then(data => {
             const info = data.bienvenida;
             
-            // Inyectamos los textos principales del JSON corporativo
-            document.getElementById('hero-title').innerText = info.titulo;
-            document.getElementById('hero-subtitle').innerText = info.subtitulo;
-            document.getElementById('hero-description').innerText = info.descripcion;
+            // Inyectamos los textos en el HTML que se acaba de cargar
+            if(document.getElementById('hero-title')) {
+                document.getElementById('hero-title').innerText = info.titulo;
+                document.getElementById('hero-subtitle').innerText = info.subtitulo;
+                document.getElementById('hero-description').innerText = info.descripcion;
+            }
 
-            // Renderizamos los pilares tecnológicos dinámicamente
             const containerPilares = document.getElementById('features-container');
             if (containerPilares && info.pilares) {
                 containerPilares.innerHTML = info.pilares.map(pilar => `
@@ -73,7 +69,7 @@ function inicializarHome() {
         .catch(err => console.error("Error cargando los datos institucionales:", err));
 }
 
-// Inicialización automática: Cuando la web carga por primera vez, abrimos la Home
+// Arrancar la SPA cargando la Home por defecto
 window.addEventListener('DOMContentLoaded', () => {
     navegarA('home');
 });
