@@ -45,7 +45,7 @@
     ],
     "seguridad": {
       "titulo": "Protección de Acceso",
-      "texto": "Implementamos protección de rutas mediante tokens (C++/JWT) y autenticación verificada, garantizando que el acceso y la trazabilidad de datos sean blindados en cada pipeline."
+      "texto": "Implementamos protección de rutas mediante tokens (C++/JWT) y autenticación verificada, garantizando que el acceso y la trazabilidad de datos sean blindados."
     }
   }
 }
