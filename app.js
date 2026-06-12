@@ -12,8 +12,8 @@ function navegarA(pagina) {
         .then(html => {
             CONTENEDOR.innerHTML = html;
 
-            // Enrutador inteligente: Esperamos un ciclo de renderizado (100ms) para garantizar que el DOM exista
-           setTimeout(() => {
+            // ... dentro de .then(html => { CONTENEDOR.innerHTML = html;
+            setTimeout(() => {
                 if (pagina === 'home') {
                     inicializarHome();
                 } else if (pagina === 'blog_rss') {
@@ -22,11 +22,11 @@ function navegarA(pagina) {
                     inicializarQuienesSomos();
                 } else if (pagina === 'mision_vision') {
                     inicializarMisionVision();
-                }
                 } else if (pagina === 'politica') {
                     inicializarPolitica();
                 }
             }, 100);
+            // ... resto del archivo
         })
         .catch(error => {
             console.error(error);
