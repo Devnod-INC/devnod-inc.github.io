@@ -141,9 +141,22 @@ function inicializarMisionVision() {
         .then(res => res.json())
         .then(data => {
             const info = data.mision_vision;
-            document.getElementById('mision-text').innerText = info.mision_texto;
-            document.getElementById('vision-text').innerText = info.vision_texto;
-        });
+            
+            // Actualización de Títulos
+            const mTitle = document.getElementById('mision-title');
+            const vTitle = document.getElementById('vision-title');
+            
+            if (mTitle) mTitle.innerText = info.mision_titulo;
+            if (vTitle) vTitle.innerText = info.vision_titulo;
+            
+            // Actualización de Textos
+            const mText = document.getElementById('mision-text');
+            const vText = document.getElementById('vision-text');
+            
+            if (mText) mText.innerText = info.mision_texto;
+            if (vText) vText.innerText = info.vision_texto;
+        })
+        .catch(err => console.error("Error al sincronizar vectores de misión:", err));
 }
 
 function inicializarPolitica() {
