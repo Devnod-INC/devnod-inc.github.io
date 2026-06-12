@@ -1,1 +1,71 @@
+<section class="mv-section">
+    <div class="mv-grid">
+        <div class="mv-card core-mision">
+            <div class="mv-icon">🎯</div>
+            <h2 id="mision-title">Cargando Misión...</h2>
+            <p id="mision-text">Estableciendo conexión con el registro de metas operativas...</p>
+        </div>
+        
+        <div class="mv-card core-vision">
+            <div class="mv-icon">👁️</div>
+            <h2 id="vision-title">Cargando Visión...</h2>
+            <p id="vision-text">Procesando vectores de proyección tecnológica a largo plazo...</p>
+        </div>
+    </div>
+</section>
 
+<style>
+    .mv-section {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .mv-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .mv-card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .mv-card:hover {
+        border-color: #444c56;
+        transform: translateY(-2px);
+    }
+
+    .mv-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .mv-card h2 {
+        font-size: 1.6rem;
+        margin: 0 0 15px 0;
+        font-weight: 600;
+    }
+
+    /* Colores temáticos alineados al diseño general */
+    .core-mision h2 {
+        color: #58a6ff; /* Azul DevNod */
+    }
+
+    .core-vision h2 {
+        color: #56d364; /* Verde operativo */
+    }
+
+    .mv-card p {
+        color: #c9d1d9;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+</style>
