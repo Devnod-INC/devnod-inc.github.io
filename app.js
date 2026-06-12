@@ -18,6 +18,8 @@ function navegarA(pagina) {
                     inicializarHome();
                 } else if (pagina === 'blog_rss') {
                     inicializarFeeds();
+                } else if (pagina === 'quienes_somos') { // <-- Nueva ruta añadida
+                    inicializarQuienesSomos();
                 }
             }, 100);
         })
@@ -42,6 +44,42 @@ function actualizarMenubar(paginaActiva) {
             boton.classList.remove('active');
         }
     });
+}
+
+function inicializarQuienesSomos() {
+    fetch(`./data/data.json?v=${new Date().getTime()}`)
+        .then(res => {
+            if (!res.ok) throw new Error("No se pudo conectar al repositorio de datos institucionales.");
+            return res.json();
+        })
+        .then(data => {
+            // Tolerancia por si viene envuelto en array o como objeto directo
+            const info = Array.isArray(data) ? data[0].quienes_somos : data.quienes_somos;
+            if (!info) throw new Error("Nodo 'quienes_somos' no encontrado en la estructura.");
+
+            // Inyección de textos principales
+            if (document.getElementById('about-title')) document.getElementById('about-title').innerText = info.titulo;
+            if (document.getElementById('about-subtitle')) document.getElementById('about-subtitle').innerText = info.subtitulo;
+            if (document.getElementById('about-story')) document.getElementById('about-story').innerText = info.historia;
+
+            // Inyección dinámica de los valores
+            const containerValores = document.getElementById('values-container');
+            if (containerValores && info.valores) {
+                containerValores.innerHTML = info.valores.map(val => `
+                    <div class="value-card">
+                        <h4>${val.concepto}</h4>
+                        <p>${val.definición}</p>
+                    </div>
+                `).join('');
+            }
+        })
+        .catch(err => {
+            console.error("Error cargando Quiénes Somos:", err);
+            const container = document.getElementById('values-container');
+            if (container) {
+                container.innerHTML = `<div style="color: #ff7b72; grid-column: 1/-1;">⚠️ Error al sincronizar el nodo de identidad: ${err.message}</div>`;
+            }
+        });
 }
 
 function inicializarHome() {
