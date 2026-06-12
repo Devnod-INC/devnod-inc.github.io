@@ -25,6 +25,9 @@ function navegarA(pagina) {
                 } else if (pagina === 'politica') {
                     inicializarPolitica();
                 }
+                } else if (pagina === 'acerca') {
+                    inicializarAcerca();
+                }
             }, 100);
             // ... resto del archivo
         })
@@ -234,6 +237,29 @@ function inicializarPolitica() {
                 </div>
             `).join('');
         }).catch(err => console.error(err));
+}
+
+function inicializarAcerca() {
+    fetch(`./data/data.json?v=${new Date().getTime()}`)
+        .then(res => res.json())
+        .then(data => {
+            const info = data.acerca;
+            document.getElementById('about-title').innerText = info.titulo;
+            document.getElementById('about-desc').innerText = info.descripcion;
+            
+            // Render de tecnologías
+            const container = document.getElementById('stack-container');
+            container.innerHTML = info.tecnologias.map(t => `
+                <div class="tech-badge" style="border-color: ${t.color}">
+                    <strong>${t.nombre}</strong>
+                    <div style="font-size: 0.75rem; color: #8b949e; margin-top:5px;">${t.tag}</div>
+                </div>
+            `).join('');
+
+            // Render de seguridad
+            document.getElementById('security-title').innerText = info.seguridad.titulo;
+            document.getElementById('security-text').innerText = info.seguridad.texto;
+        });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
