@@ -66,21 +66,26 @@ function inicializarFeeds() {
     const selectorBusqueda = document.getElementById('rss-search');
     let noticiasLocales = [];
 
+    // Diccionario completo basado en tu feeds.json
     const fuentesConfig = {
         "sophos_threat": { nombre: "Sophos Threat", color: "#ff7b72" },
-        "aws_news": { nombre: "AWS What's New", color: "#f29d38" },
-        "gcp_cloud": { nombre: "Google Cloud", color: "#79c0ff" }
+        "sophos_ops": { nombre: "Sophos Ops", color: "#ff9f43" },
+        "aws_news": { nombre: "AWS News", color: "#f29d38" },
+        "gcp_cloud": { nombre: "Google Cloud", color: "#79c0ff" },
+        "suse_news": { nombre: "SUSE News", color: "#73d13d" },
+        "broadcom_vmware": { nombre: "VMware", color: "#e83e8c" },
+        "veeam_intel": { nombre: "Veeam", color: "#6f42c1" },
+        "hackerrank": { nombre: "HackerRank", color: "#28a745" }
     };
 
     function pintar(noticias) {
         if (!contenedor) return;
         contenedor.innerHTML = noticias.map(item => {
-            // Buscamos la configuración basándonos en una propiedad 'fuente' que debe venir en tu feeds.json
-            const config = fuentesConfig[item.fuente] || { nombre: "Noticia", color: "#8b949e" };
+            const config = fuentesConfig[item.source] || { nombre: "General", color: "#8b949e" };
             
             return `
                 <article class="rss-card">
-                    <div class="rss-badge" style="border-top: 3px solid ${config.color}">
+                    <div class="rss-badge" style="background: ${config.color}">
                         ${config.nombre}
                     </div>
                     <h3>${item.title}</h3>
