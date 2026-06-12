@@ -162,3 +162,12 @@ body {
     border-radius: 8px;
     margin-top: 20px;
 }
+
+.rss-badge {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #c9d1d9;
+    text-transform: uppercase;
+}
