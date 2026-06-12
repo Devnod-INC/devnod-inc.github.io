@@ -44,15 +44,18 @@ function actualizarMenubar(paginaActiva) {
 
 // Consumidor asíncrono para rellenar los datos corporativos
 function inicializarHome() {
-    fetch('./data/data.json')
+    // Cache Busting: Forzamos al navegador a leer la última versión del JSON saltándose la caché
+    fetch(`./data/data.json?v=${new Date().getTime()}`)
         .then(res => {
-            if (!res.ok) throw new Error("No se pudo leer data.json");
+            if (!res.ok) throw new Error(`HTTP error! status: ${res.status} (No se encontró data.json)`);
             return res.json();
         })
         .then(data => {
-            const info = data.bienvenida;
+            // Manejo de compatibilidad por si acaso: acepta si viene como objeto directo o dentro de un arreglo
+            const info = Array.isArray(data) ? data[0].bienvenida : data.bienvenida;
             
-            // Verificamos de forma estricta que los elementos existan antes de escribir en ellos
+            if (!info) throw new Error("No se encontró el nodo 'bienvenida' en la estructura de datos.");
+            
             const titleEl = document.getElementById('hero-title');
             const subtitleEl = document.getElementById('hero-subtitle');
             const descEl = document.getElementById('hero-description');
@@ -73,10 +76,12 @@ function inicializarHome() {
             }
         })
         .catch(err => {
-            console.error("Error cargando los datos institucionales:", err);
-            // Si el JSON falla, ponemos un mensaje de aviso en el título para saberlo
+            console.error("Error crítico detectado:", err);
             const titleEl = document.getElementById('hero-title');
-            if (titleEl) titleEl.innerText = "Error al conectar con la base de datos estática.";
+            if (titleEl) {
+                titleEl.style.color = "#ff7b72";
+                titleEl.innerText = `⚠️ Fallo en el Nodo de Datos: ${err.message}`;
+            }
         });
 }
 
