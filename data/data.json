@@ -1,0 +1,14 @@
+{
+  "organizacion": {
+    "quienes_somos": "Somos un nodo de ingeniería especializado en el desarrollo y despliegue de soluciones de software altamente complejas...",
+    "mision": "Diseñar e implementar arquitecturas robustas y escalables que resuelvan problemas críticos...",
+    "vision": "Convertirnos en el referente tecnológico para la automatización y gestión de infraestructuras complejas...",
+    "politica": "Garantizar la alta disponibilidad, seguridad de la información y optimización de recursos en cada línea de código desplegada."
+  },
+  "tecnologia": {
+    "arquitectura": "JAMstack (JavaScript, APIs, Markup)",
+    "hosting": "GitHub Pages (CDN Global)",
+    "automatizacion": "GitHub Actions CI/CD",
+    "formularios": "Formspree API con autenticación OAuth 2.0 (Google Login)"
+  }
+}
