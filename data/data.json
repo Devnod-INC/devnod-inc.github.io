@@ -34,10 +34,18 @@
       { "titulo": "Protocolo de Resolución de Incidencias", "contenido": "Ante cualquier vulnerabilidad, activamos nuestro protocolo de respuesta inmediata (Incident Response Plan), priorizando la contención, mitigación y notificación a los actores relevantes en un tiempo récord." }
     ]
   },
-  "tecnologia": {
-    "arquitectura": "JAMstack (JavaScript, APIs, Markup)",
-    "hosting": "GitHub Pages (CDN Global)",
-    "automatizacion": "GitHub Actions CI/CD",
-    "formularios": "Formspree API con autenticación OAuth 2.0 (Google Login)"
+  "acerca": {
+    "titulo": "Stack Tecnológico y Seguridad",
+    "descripcion": "Ecosistema diseñado para la resiliencia digital y el control de flujos de datos.",
+    "tecnologias": [
+      { "nombre": "Python", "tag": "Orquestación CI/CD", "color": "#3776ab" },
+      { "nombre": "Firebase Auth", "tag": "Google OAuth 2.0", "color": "#ffca28" },
+      { "nombre": "Formspree", "tag": "Registro de Solicitudes", "color": "#ff5722" },
+      { "nombre": "JAMstack", "tag": "Arquitectura", "color": "#f7df1e" }
+    ],
+    "seguridad": {
+      "titulo": "Protección de Identidad",
+      "texto": "Implementamos Firebase Authentication para asegurar que cada interacción sea validada mediante Google, garantizando la trazabilidad y privacidad de los datos personales antes de cualquier procesamiento en nuestros pipelines."
+    }
   }
 }
