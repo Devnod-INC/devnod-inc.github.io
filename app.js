@@ -1,41 +1,33 @@
 const CONTENEDOR = document.getElementById('content');
 
-/**
- * Función central de enrutamiento.
- * Carga el fragmento HTML, inyecta el contenido y dispara el inicializador correspondiente.
- */
-function navegarA(pagina) {
+async function navegarA(pagina) {
     CONTENEDOR.innerHTML = `<div class="loader-placeholder">Conectando con el nodo ${pagina}...</div>`;
     actualizarMenubar(pagina);
 
-    fetch(`./paginas/${pagina}.html`)
-        .then(response => {
-            if (!response.ok) throw new Error(`No se pudo cargar el fragmento: ${pagina}`);
-            return response.text();
-        })
-        .then(html => {
-            CONTENEDOR.innerHTML = html;
+    try {
+        const response = await fetch(`./paginas/${pagina}.html?v=${Date.now()}`);
+        if (!response.ok) throw new Error("Nodo no encontrado");
+        
+        const html = await response.text();
+        CONTENEDOR.innerHTML = html;
 
-            // Esperamos un breve tiempo para asegurar que el DOM está renderizado
-            setTimeout(() => {
-                const nodos = {
-                    'home': inicializarHome,
-                    'blog_rss': inicializarFeeds,
-                    'quienes_somos': inicializarQuienesSomos,
-                    'mision_vision': inicializarMisionVision,
-                    'politica': inicializarPolitica,
-                    'acerca': inicializarAcerca
-                };
+        // Llamada a la función específica según la página
+        const inicializadores = {
+            'home': inicializarHome,
+            'blog_rss': inicializarFeeds,
+            'quienes_somos': inicializarQuienesSomos,
+            'mision_vision': inicializarMisionVision,
+            'politica': inicializarPolitica,
+            'acerca': inicializarAcerca
+        };
 
-                if (nodos[pagina]) {
-                    nodos[pagina]();
-                }
-            }, 200);
-        })
-        .catch(error => {
-            console.error(error);
-            CONTENEDOR.innerHTML = `<div class="loader-placeholder" style="color: #ff7b72;">⚠️ Error: ${error.message}</div>`;
-        });
+        if (inicializadores[pagina]) {
+            await inicializadores[pagina]();
+        }
+    } catch (error) {
+        console.error("Error crítico de carga:", error);
+        CONTENEDOR.innerHTML = `<div class="error">⚠️ Error de conexión: ${error.message}</div>`;
+    }
 }
 
 function actualizarMenubar(paginaActiva) {
