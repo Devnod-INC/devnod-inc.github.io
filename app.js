@@ -1,22 +1,25 @@
 const CONTENEDOR = document.getElementById('content');
 
+// Función principal para cambiar de pestañas en la SPA
 function navegarA(pagina) {
     CONTENEDOR.innerHTML = `<div class="loader-placeholder">Conectando con el nodo ${pagina}...</div>`;
     actualizarMenubar(pagina);
 
-    // Agregamos './' explícito para garantizar que busque dentro de las carpetas de tu repositorio
     fetch(`./paginas/${pagina}.html`)
         .then(response => {
             if (!response.ok) throw new Error(`No se pudo cargar el fragmento: ${pagina}`);
             return response.text();
         })
         .then(html => {
+            // Inyectamos el componente
             CONTENEDOR.innerHTML = html;
 
-            // Si es la home, gatillamos la inyección del JSON
-            if (pagina === 'home') {
-                inicializarHome();
-            }
+            // Damos un respiro de 50ms para que el DOM se asiente antes de meter JavaScript dinámico
+            setTimeout(() => {
+                if (pagina === 'home') {
+                    inicializarHome();
+                }
+            }, 50);
         })
         .catch(error => {
             console.error(error);
@@ -27,6 +30,7 @@ function navegarA(pagina) {
         });
 }
 
+// Control visual de los botones del menú superior
 function actualizarMenubar(paginaActiva) {
     const botones = document.querySelectorAll('.nav-link');
     botones.forEach(boton => {
@@ -38,8 +42,8 @@ function actualizarMenubar(paginaActiva) {
     });
 }
 
+// Consumidor asíncrono para rellenar los datos corporativos
 function inicializarHome() {
-    // Aseguramos la ruta relativa al JSON con './'
     fetch('./data/data.json')
         .then(res => {
             if (!res.ok) throw new Error("No se pudo leer data.json");
@@ -48,14 +52,16 @@ function inicializarHome() {
         .then(data => {
             const info = data.bienvenida;
             
-            // Inyectamos los textos en el HTML que se acaba de cargar
-            if(document.getElementById('hero-title')) {
-                document.getElementById('hero-title').innerText = info.titulo;
-                document.getElementById('hero-subtitle').innerText = info.subtitulo;
-                document.getElementById('hero-description').innerText = info.descripcion;
-            }
-
+            // Verificamos de forma estricta que los elementos existan antes de escribir en ellos
+            const titleEl = document.getElementById('hero-title');
+            const subtitleEl = document.getElementById('hero-subtitle');
+            const descEl = document.getElementById('hero-description');
             const containerPilares = document.getElementById('features-container');
+
+            if (titleEl) titleEl.innerText = info.titulo;
+            if (subtitleEl) subtitleEl.innerText = info.subtitulo;
+            if (descEl) descEl.innerText = info.descripcion;
+
             if (containerPilares && info.pilares) {
                 containerPilares.innerHTML = info.pilares.map(pilar => `
                     <div class="feature-card">
@@ -66,10 +72,15 @@ function inicializarHome() {
                 `).join('');
             }
         })
-        .catch(err => console.error("Error cargando los datos institucionales:", err));
+        .catch(err => {
+            console.error("Error cargando los datos institucionales:", err);
+            // Si el JSON falla, ponemos un mensaje de aviso en el título para saberlo
+            const titleEl = document.getElementById('hero-title');
+            if (titleEl) titleEl.innerText = "Error al conectar con la base de datos estática.";
+        });
 }
 
-// Arrancar la SPA cargando la Home por defecto
+// Carga inicial automática de la SPA
 window.addEventListener('DOMContentLoaded', () => {
     navegarA('home');
 });
