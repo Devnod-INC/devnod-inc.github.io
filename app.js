@@ -13,13 +13,15 @@ function navegarA(pagina) {
             CONTENEDOR.innerHTML = html;
 
             // Enrutador inteligente: Esperamos un ciclo de renderizado (100ms) para garantizar que el DOM exista
-            setTimeout(() => {
+           setTimeout(() => {
                 if (pagina === 'home') {
                     inicializarHome();
                 } else if (pagina === 'blog_rss') {
                     inicializarFeeds();
-                } else if (pagina === 'quienes_somos') { // <-- Nueva ruta añadida
+                } else if (pagina === 'quienes_somos') {
                     inicializarQuienesSomos();
+                } else if (pagina === 'mision_vision') { // <-- Añadimos la condición
+                    inicializarMisionVision();
                 }
             }, 100);
         })
@@ -187,6 +189,27 @@ function inicializarFeeds() {
                 <div style="color: #ff7b72; text-align: center; grid-column: 1/-1; padding: 40px;">
                     ⚠️ Error en el flujo de sincronización: Archivo data/feeds.json no encontrado o con formato incorrecto.
                 </div>`;
+        });
+}
+
+function inicializarMisionVision() {
+    fetch(`./data/data.json?v=${new Date().getTime()}`)
+        .then(res => {
+            if (!res.ok) throw new Error("No se pudo conectar al origen de datos estáticos.");
+            return res.json();
+        })
+        .then(data => {
+            const info = Array.isArray(data) ? data[0].mision_vision : data.mision_vision;
+            if (!info) throw new Error("Nodo 'mision_vision' no encontrado en la estructura JSON.");
+
+            // Inyectamos el contenido en los selectores correspondientes
+            if (document.getElementById('mision-title')) document.getElementById('mision-title').innerText = info.mision_titulo;
+            if (document.getElementById('mision-text')) document.getElementById('mision-text').innerText = info.mision_texto;
+            if (document.getElementById('vision-title')) document.getElementById('vision-title').innerText = info.vision_titulo;
+            if (document.getElementById('vision-text')) document.getElementById('vision-text').innerText = info.vision_texto;
+        })
+        .catch(err => {
+            console.error("Error cargando Misión & Visión:", err);
         });
 }
 
