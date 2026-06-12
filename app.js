@@ -24,7 +24,6 @@ function navegarA(pagina) {
                     inicializarMisionVision();
                 } else if (pagina === 'politica') {
                     inicializarPolitica();
-                }
                 } else if (pagina === 'acerca') {
                     inicializarAcerca();
                 }
