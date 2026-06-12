@@ -134,3 +134,31 @@ body {
 .footer-meta {
     color: #58a6ff;
 }
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.tech-badge {
+    padding: 15px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-top: 4px solid #3776ab; /* El color se inyecta dinámicamente */
+    border-radius: 6px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.tech-badge strong { color: #e6edf3; display: block; margin-bottom: 5px; }
+.tech-badge small { color: #8b949e; font-size: 0.75rem; }
+
+.security-card {
+    background: #0d1117;
+    padding: 20px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    margin-top: 20px;
+}
