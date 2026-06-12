@@ -73,11 +73,20 @@ function inicializarFeeds() {
     };
 
     function pintar(noticias) {
-        contenedor.innerHTML = noticias.map(item => `
-            <article class="rss-card">
-                <h3>${item.title}</h3>
-                <a href="${item.link}" target="_blank">Leer reporte ↗</a>
-            </article>`).join('');
+        if (!contenedor) return;
+        contenedor.innerHTML = noticias.map(item => {
+            // Buscamos la configuración basándonos en una propiedad 'fuente' que debe venir en tu feeds.json
+            const config = fuentesConfig[item.fuente] || { nombre: "Noticia", color: "#8b949e" };
+            
+            return `
+                <article class="rss-card">
+                    <div class="rss-badge" style="border-top: 3px solid ${config.color}">
+                        ${config.nombre}
+                    </div>
+                    <h3>${item.title}</h3>
+                    <a href="${item.link}" target="_blank">Leer reporte ↗</a>
+                </article>`;
+        }).join('');
     }
 
     fetch(`./data/feeds.json?v=${new Date().getTime()}`)
