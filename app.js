@@ -12,14 +12,14 @@ function navegarA(pagina) {
         .then(html => {
             CONTENEDOR.innerHTML = html;
 
-            // Enrutador inteligente: Gatilla la función correspondiente según la pestaña activa
+            // Enrutador inteligente: Esperamos un ciclo de renderizado (100ms) para garantizar que el DOM exista
             setTimeout(() => {
                 if (pagina === 'home') {
                     inicializarHome();
                 } else if (pagina === 'blog_rss') {
                     inicializarFeeds();
                 }
-            }, 50);
+            }, 100);
         })
         .catch(error => {
             console.error(error);
@@ -33,10 +33,12 @@ function navegarA(pagina) {
 function actualizarMenubar(paginaActiva) {
     const botones = document.querySelectorAll('.nav-link');
     botones.forEach(boton => {
-        if (boton.getAttribute('onclick').includes(`'${paginaActiva}'`)) {
+        // Validación segura: extraemos el nombre de la página del atributo onclick
+        const onclickAttr = boton.getAttribute('onclick') || '';
+        if (onclickAttr.includes(`'${paginaActiva}'`)) {
             boton.classList.add('active');
         } else {
-            boton.classList.remove('remove');
+            // Corrección: Eliminamos de forma limpia únicamente la clase 'active'
             boton.classList.remove('active');
         }
     });
@@ -65,13 +67,16 @@ function inicializarHome() {
         }).catch(err => console.error(err));
 }
 
-// LÓGICA DE LOS FEEDS RSS CENTRALIZADA Y SEGURA
 function inicializarFeeds() {
     let noticiasLocales = [];
     const contenedor = document.getElementById('rss-container');
     const selectorBusqueda = document.getElementById('rss-search');
 
-    if (!contenedor) return;
+    // Si por temas de asincronía el contenedor aún no está listo, cancelamos la ejecución para evitar congelamiento
+    if (!contenedor) {
+        console.warn("Advertencia: El contenedor 'rss-container' no se encontró en el DOM todavía.");
+        return;
+    }
 
     const fuentesConfig = {
         "sophos_threat": { nombre: "Sophos Threat", color: "#ff7b72", bg: "rgba(255,123,114,0.1)" },
@@ -92,7 +97,13 @@ function inicializarFeeds() {
 
         contenedor.innerHTML = noticias.map(item => {
             const srcInfo = fuentesConfig[item.source] || { nombre: item.source, color: "#c9d1d9", bg: "#21262d" };
-            let fechaTexto = item.date.split(' ').slice(1, 4).join(' ') || "Reciente";
+            
+            // Procesamiento seguro de la cadena de fecha evitando colapsos del Inti
+            let fechaTexto = "Reciente";
+            if (item.date) {
+                const fragmentos = item.date.split(' ');
+                fechaTexto = fragmentos.length >= 4 ? fragmentos.slice(1, 4).join(' ') : item.date;
+            }
 
             return `
                 <article class="rss-card">
@@ -122,10 +133,10 @@ function inicializarFeeds() {
         });
     }
 
-    // El fetch se ejecuta sabiendo que el contexto de ejecución real es la raíz
+    // Petición directa al JSON relativo a la raíz de la SPA
     fetch(`./data/feeds.json?v=${new Date().getTime()}`)
         .then(res => {
-            if (!res.ok) throw new Error(`HTTP ${res.status}: No se pudo leer el archivo de feeds.`);
+            if (!res.ok) throw new Error(`HTTP ${res.status}: No se pudo acceder a los datos.`);
             return res.json();
         })
         .then(data => {
@@ -133,8 +144,11 @@ function inicializarFeeds() {
             pintarEstructura(noticiasLocales);
         })
         .catch(err => {
-            console.error(err);
-            contenedor.innerHTML = `<div style="color: #ff7b72; text-align: center; grid-column: 1/-1; padding: 40px;">⚠️ Error en el flujo de sincronización: ${err.message}</div>`;
+            console.error("Error en inicializarFeeds:", err);
+            contenedor.innerHTML = `
+                <div style="color: #ff7b72; text-align: center; grid-column: 1/-1; padding: 40px;">
+                    ⚠️ Error en el flujo de sincronización: Archivo data/feeds.json no encontrado o con formato incorrecto.
+                </div>`;
         });
 }
 
