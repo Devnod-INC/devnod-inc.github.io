@@ -20,8 +20,11 @@ function navegarA(pagina) {
                     inicializarFeeds();
                 } else if (pagina === 'quienes_somos') {
                     inicializarQuienesSomos();
-                } else if (pagina === 'mision_vision') { // <-- Añadimos la condición
+                } else if (pagina === 'mision_vision') {
                     inicializarMisionVision();
+                }
+                } else if (pagina === 'politica') {
+                    inicializarPolitica();
                 }
             }, 100);
         })
@@ -211,6 +214,26 @@ function inicializarMisionVision() {
         .catch(err => {
             console.error("Error cargando Misión & Visión:", err);
         });
+}
+
+function inicializarPolitica() {
+    fetch(`./data/data.json?v=${new Date().getTime()}`)
+        .then(res => res.json())
+        .then(data => {
+            const info = Array.isArray(data) ? data[0].politica : data.politica;
+            if (!info) return;
+
+            document.getElementById('policy-title').innerText = info.titulo;
+            document.getElementById('policy-intro').innerText = info.intro;
+
+            const container = document.getElementById('policy-container');
+            container.innerHTML = info.secciones.map(sec => `
+                <div class="policy-card">
+                    <h3>${sec.titulo}</h3>
+                    <p>${sec.contenido}</p>
+                </div>
+            `).join('');
+        }).catch(err => console.error(err));
 }
 
 window.addEventListener('DOMContentLoaded', () => {
