@@ -207,4 +207,32 @@ function inicializarAcerca() {
         });
 }
 
+function inicializarProyectos() {
+    const gridContainer = document.getElementById('proyectos-grid');
+    if (!gridContainer) return;
+
+    // Consumo local desde tu estructura de carpetas
+    fetch(`./data/proyectos.json?v=${new Date().getTime()}`)
+        .then(res => res.json())
+        .then(data => {
+            gridContainer.innerHTML = data.map(p => `
+                <article class="project-card">
+                    <div class="card-header">
+                        <h3>${p.nombre}</h3>
+                        <span style="color: ${p.estado === 'Activo' ? '#00ff9d' : '#ffc107'}">● ${p.estado}</span>
+                    </div>
+                    <p class="description">${p.descripcion}</p>
+                    <div class="stack-tags">
+                        ${p.stack.map(s => `<span>${s}</span>`).join('')}
+                    </div>
+                    <a href="${p.url}" target="_blank" class="btn-primary">Ver Documentación</a>
+                </article>
+            `).join('');
+        })
+        .catch(err => {
+            console.error("Error al cargar el catálogo local:", err);
+            gridContainer.innerHTML = `<p class="error-msg">Error: No se pudo cargar el registro de proyectos.</p>`;
+        });
+}
+
 window.addEventListener('DOMContentLoaded', () => navegarA('home'));
