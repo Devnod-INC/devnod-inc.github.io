@@ -34,18 +34,19 @@
       { "titulo": "Protocolo de Resiliencia", "contenido": "Ante fallos de conectividad, activamos nuestra capa de persistencia local, priorizando la operatividad funcional sobre la dependencia del servidor." }
     ]
   },
-  "acerca": {
+"acerca": {
     "titulo": "Stack Tecnológico y Seguridad",
     "descripcion": "Ecosistema de ingeniería enfocado en resiliencia, velocidad y control total.",
     "tecnologias": [
-      { "nombre": "C++ / Java", "tag": "Núcleo de Seguridad", "color": "#00599c" },
-      { "nombre": "Node.js", "tag": "Orquestación de API", "color": "#8cc84b" },
-      { "nombre": "Python", "tag": "Automatización CI/CD", "color": "#3776ab" },
-      { "nombre": "SQL / NoSQL", "tag": "Redundancia Híbrida", "color": "#00758f" }
+      { "nombre": "C++ / Java", "tag": "Cálculo, Seguridad y Spring/JPA", "color": "#00599c" },
+      { "nombre": "Node.js / React", "tag": "Orquestación y Fullstack", "color": "#8cc84b" },
+      { "nombre": "Python", "tag": "Automatización CI/CD Pipelines", "color": "#3776ab" },
+      { "nombre": "SQL / NoSQL", "tag": "Redundancia Cíclica y Persistencia", "color": "#00758f" },
+      { "nombre": "Angular", "tag": "Frontend Corporativo", "color": "#dd0031" }
     ],
     "seguridad": {
-      "titulo": "Protección de Acceso",
-      "texto": "Implementamos protección de rutas mediante tokens (C++/JWT) y autenticación verificada, garantizando que el acceso y la trazabilidad de datos sean blindados."
+      "titulo": "Protección de Acceso y Blindaje",
+      "texto": "Arquitectura de seguridad basada en módulos C++ y JWT, garantizando trazabilidad, integridad de datos y resiliencia mediante redundancia cíclica en sistemas críticos."
     }
   }
 }
