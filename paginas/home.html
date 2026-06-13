@@ -23,20 +23,21 @@
 <style>
     /* Estilos específicos del componente de bienvenida */
     .hero-banner {
-    position: relative;
-    height: 400px;
-    background-image: url('../images/devnod_banner.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
+        position: relative;
+        width: 100%;
+        aspect-ratio: 21 / 9; /* Ajusta este número según la proporción real de tu banner */
+        background-image: url('../images/devnod_banner.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
 
-/* La capa oscura (overlay) */
+    /* La capa oscura (overlay) */
     .hero-overlay {
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
