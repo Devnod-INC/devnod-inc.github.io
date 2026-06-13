@@ -18,7 +18,8 @@ async function navegarA(pagina) {
             'quienes_somos': inicializarQuienesSomos,
             'mision_vision': inicializarMisionVision,
             'politica': inicializarPolitica,
-            'acerca': inicializarAcerca
+            'acerca': inicializarAcerca,
+            'proyectos': inicializarProyectos
         };
 
         if (inicializadores[pagina]) {
