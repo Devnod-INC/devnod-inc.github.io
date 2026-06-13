@@ -164,8 +164,29 @@ function inicializarPolitica() {
         .then(res => res.json())
         .then(data => {
             const info = data.politica;
-            document.getElementById('policy-container').innerHTML = info.secciones.map(s => `
-                <div class="policy-card"><h3>${s.titulo}</h3><p>${s.contenido}</p></div>`).join('');
+            if (!info) return;
+
+            // Actualizar Título e Intro
+            const titleEl = document.getElementById('policy-title');
+            const introEl = document.getElementById('policy-intro');
+            const containerEl = document.getElementById('policy-container');
+
+            if (titleEl) titleEl.innerText = info.titulo;
+            if (introEl) introEl.innerText = info.intro;
+
+            // Actualizar Grid de políticas
+            if (containerEl && info.secciones) {
+                containerEl.innerHTML = info.secciones.map(s => `
+                    <div class="policy-card">
+                        <h3>${s.titulo}</h3>
+                        <p>${s.contenido}</p>
+                    </div>`).join('');
+            }
+        })
+        .catch(err => {
+            console.error("Error crítico al cargar políticas:", err);
+            const titleEl = document.getElementById('policy-title');
+            if (titleEl) titleEl.innerText = "Error al cargar políticas";
         });
 }
 
