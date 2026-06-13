@@ -189,3 +189,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
