@@ -46,33 +46,27 @@ body {
 }
 
 .logo-img {
-    height: 32px;        /* Ajusta según el tamaño real de tu archivo */
-    width: auto;         /* Mantiene la proporción */
+    height: 32px;
+    width: auto;
+    /* Mejora la calidad del renderizado de la imagen en navegadores */
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: crisp-edges;
+    
     vertical-align: middle;
-    margin-right: 10px;  /* Espacio entre logo y texto */
-    transition: transform 0.2s;
+    margin-right: 12px; /* Un poco más de margen para que el logo 'respire' */
+    transition: transform 0.25s ease-out; /* Una curva de transición más profesional */
 }
 
 .logo-area:hover .logo-img {
     transform: scale(1.05);
 }
 
-/* Asegurar alineación vertical en el header */
 .logo-area {
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-.logo-text {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: #ffffff;
-}
-
-.logo-text .accent {
-    color: var(--accent);
+    /* Importante: para que el hover no haga que todo el header se mueva */
+    padding: 5px 0; 
 }
 
 /* EL MENÚ CON ESTILO DE BOTONES EN LINEA */
