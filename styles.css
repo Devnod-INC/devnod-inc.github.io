@@ -45,10 +45,22 @@ body {
     gap: 15px;
 }
 
+.logo-img {
+    height: 32px;        /* Ajusta según el tamaño real de tu archivo */
+    width: auto;         /* Mantiene la proporción */
+    vertical-align: middle;
+    margin-right: 10px;  /* Espacio entre logo y texto */
+    transition: transform 0.2s;
+}
+
+.logo-area:hover .logo-img {
+    transform: scale(1.05);
+}
+
+/* Asegurar alineación vertical en el header */
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 10px;
     cursor: pointer;
 }
 
