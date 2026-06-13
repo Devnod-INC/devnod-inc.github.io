@@ -1,16 +1,42 @@
 [
   {
-    "id": 1,
-    "nombre": "Cisco Linux Fundamentals Automation",
-    "descripcion": "Scripts de automatización y despliegue para entornos basados en Linux.",
-    "status": "Desplegado",
-    "fecha": "2026-04"
+    "id": "nod-001",
+    "nombre": "DevNod Ops Center",
+    "url": "https://sloty00.github.io/projects/",
+    "stack": ["GitOps", "Project-Management", "Data-Tracking"],
+    "descripcion": "Motor de control de gestión y operaciones automatizado. Realiza seguimiento en tiempo real de avance de fases, horas hombre (H/H) y valorización de proyectos bajo metodología ágil.",
+    "estado": "Activo"
   },
   {
-    "id": 2,
-    "nombre": "Frontend Expert Validations",
-    "descripcion": "Componentes avanzados y modulares optimizados para el rendimiento de la interfaz.",
-    "status": "Completado",
-    "fecha": "2026-03"
-  }
+    "id": "nod-002",
+    "nombre": "VCloud Platform",
+    "url": "https://youtu.be/7eG1dr3rBHw",
+    "stack": ["Node.js", "Prisma-ORM", "JWT", "Multer"],
+    "descripcion": "Plataforma de almacenamiento en la nube con arquitectura de gestión de datos empresarial. Implementa patrones de diseño creacionales (Builder) para la creación dinámica de estructuras de acceso (Entities/Groups/Users) y seguridad basada en tokens JWT.",
+    "estado": "En Desarrollo"
+  },
+  {
+  "id": "nod-003",
+  "nombre": "Monitor Central",
+  "url": "https://github.com/sloty00/monitor-central",
+  "stack": ["Orquestación", "Linux-Systems", "Ofuscación", "High-Availability"],
+  "descripcion": "Núcleo de comando para la orquestación de sistemas. Implementa protocolos de visibilidad en tiempo real y capas de seguridad mediante ofuscación para proteger la lógica operativa y garantizar la integridad de los procesos en entornos críticos.",
+  "estado": "Activo"
+},
+{
+  "id": "nod-004",
+  "nombre": "Auth Gateway (JWT/SQL)",
+  "url": "https://github.com/sloty00/Login-con-JWT-y-SQL",
+  "stack": ["Java", "Spring-Boot", "JWT", "SQL", "Security"],
+  "descripcion": "Sistema de gestión de identidad y acceso (IAM) basado en arquitectura stateless. Implementa autenticación robusta mediante tokens JWT y persistencia relacional, garantizando la seguridad de endpoints críticos en entornos empresariales.",
+  "estado": "Activo"
+},
+{
+  "id": "nod-004",
+  "nombre": "Auth Gateway (JWT/SQL/Firebase)",
+  "url": "https://github.com/sloty00/Login-con-Java-JWT-MySQL-Firebase",
+  "stack": ["Java", "Spring-Boot", "JWT", "SQL", "Firebase"],
+  "descripcion": "Sistema IAM de arquitectura híbrida. Combina la robustez de Spring Boot y SQL con la agilidad de Firebase para autenticación distribuida, gestión de sesiones sin estado (JWT) y despliegue escalable en entornos de nube.",
+  "estado": "Activo"
+}
 ]
