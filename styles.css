@@ -196,3 +196,66 @@ body {
     gap: 2rem;
     margin-top: 2rem;
 }
+
+/* ==========================================================================
+   SECCIÓN HERO / BANNER PRINCIPAL (RESPONSIVO)
+   ========================================================================== */
+
+/* Contenedor del Banner (Ajusta la clase si en tu JS usas otro nombre) */
+.hero-banner {
+    background-image: linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.85)), url('images/banner_bg.jpg'); /* Ejemplo de fallback con opacidad */
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    
+    /* CRUCIAL: Evita altos fijos para que el contenedor se estire si el texto se envuelve */
+    height: auto; 
+    min-height: 220px; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Corta cualquier residuo extraño fuera del radio del borde */
+}
+
+/* Título Principal Fluido (Usa clamp para no requerir tantas media queries) */
+.hero-banner h1 {
+    color: #ffffff;
+    /* clamp(mínimo, preferido basado en ancho de pantalla, máximo) */
+    font-size: clamp(1.6rem, 4.5vw, 2.8rem); 
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    max-width: 900px; /* Evita que las líneas se estiren demasiado en pantallas gigantes */
+    word-wrap: break-word;
+}
+
+/* Subtítulo o texto secundario del banner */
+.hero-banner p {
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+    max-width: 600px;
+}
+
+/* OPCIONAL: Si el menú de botones colapsa de forma muy abrupta en móviles muy chicos (Ej: iPhone SE) */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 10px 10px;
+        justify-content: center; /* Centra el logo y menú en móviles pequeños */
+    }
+    
+    .menubar {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .nav-link {
+        padding: 6px 10px; /* Botones ligeramente más compactos para que no rompan fila feo */
+        font-size: 0.85rem;
+    }
+}
