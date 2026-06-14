@@ -253,35 +253,36 @@ function inicializarContacto() {
                 if (user) {
                     authArea.style.display = 'none';
                     contactForm.style.display = 'block';
-                    
                     if (userInfo) userInfo.innerText = `Autenticado como: ${user.email}`;
-
+                    
                     const nameInput = document.getElementById('user_name');
                     const emailInput = document.getElementById('user_email');
                     if (nameInput) nameInput.value = user.displayName || "Usuario Google";
                     if (emailInput) emailInput.value = user.email;
 
-                    if (selectServicio) {
-                        fetch(`./data/servicios.json?v=${new Date().getTime()}`)
-                            .then(res => res.json())
-                            .then(servicios => {
-                                selectServicio.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
-                                    servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
-                            })
-                            .catch(err => {
-                                console.error("Error al cargar servicios:", err);
-                                selectServicio.innerHTML = '<option value="error">Error al cargar servicios</option>';
-                            });
-                    }
+                    fetch(`./data/servicios.json?v=${new Date().getTime()}`)
+                        .then(res => res.json())
+                        .then(servicios => {
+                            selectServicio.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
+                                servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
+                        })
+                        .catch(err => {
+                            console.error("Error al cargar servicios:", err);
+                        });
                 } else {
                     authArea.style.display = 'block';
                     contactForm.style.display = 'none';
                     
                     if (btnLogin) {
-                        btnLogin.onclick = () => {
-                            const provider = new firebase.auth.GoogleAuthProvider();
-                            window.auth.signInWithPopup(provider)
-                                .catch(err => console.error("Error en login:", err));
+                        btnLogin.onclick = async () => {
+                            try {
+                                // Importación dinámica de los métodos de Auth v12
+                                const { GoogleAuthProvider, signInWithPopup } = await import("https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js");
+                                const provider = new GoogleAuthProvider();
+                                await signInWithPopup(window.auth, provider);
+                            } catch (err) {
+                                console.error("Error en login:", err);
+                            }
                         };
                     }
                 }
