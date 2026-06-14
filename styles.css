@@ -197,6 +197,80 @@ body {
     margin-top: 2rem;
 }
 
+/* CONFIGURACIÓN DE TARJETAS DE PROYECTOS */
+.project-card {
+    background-color: var(--bg-header);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: #444c56;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.card-header h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-card .description {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+/* CONTENEDOR DE BADGES DINÁMICOS */
+.stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.stack-tags img {
+    height: 20px; /* Altura estandarizada y limpia para estilo plastic */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent-hover);
+}
+
 /* ==========================================================================
    SECCIÓN HERO / BANNER PRINCIPAL (RESPONSIVO)
    ========================================================================== */
