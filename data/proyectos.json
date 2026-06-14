@@ -94,5 +94,13 @@
   "stack": ["Node.js", "C++", "OpenSSL", "Node-GYP", "REST-API"],
   "descripcion": "Motor de cifrado de alta seguridad. Implementación nativa en C++ integrada con OpenSSL para el procesamiento de contraseñas, proporcionando cifrado robusto y codificación Base64 en una arquitectura de API segura.",
   "estado": "Activo"
+},
+{
+  "id": "nod-012",
+  "nombre": "Native RUT Validator (Core C++)",
+  "url": "https://github.com/sloty00/ValidadorRutCpp",
+  "stack": ["C++"],
+  "descripcion": "Motor de validación de identidad nacional (RUT Chileno) escrito en C++ puro. Proporciona una lógica de comprobación rápida, eficiente y sin dependencias externas para verificación de integridad de datos en entornos de sistema.",
+  "estado": "Activo"
 }
 ]
