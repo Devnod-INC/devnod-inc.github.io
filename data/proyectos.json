@@ -78,5 +78,13 @@
   "stack": ["Node.js", "C++", "Node-GYP", "Express", "REST-API"],
   "descripcion": "Motor de cálculo de redes de alto rendimiento. Implementa lógica de direccionamiento IP en C++ nativo expuesto a través de Node.js, optimizando drásticamente la latencia de cómputo para segmentación de subredes y procesamiento binario.",
   "estado": "Activo"
+},
+{
+  "id": "nod-010",
+  "nombre": "Chilean RUT Verifier (C++ Addon)",
+  "url": "https://github.com/sloty00/Calc_Rut-NodejsCpp",
+  "stack": ["Node.js", "C++", "Node-GYP", "Express", "REST-API"],
+  "descripcion": "Motor de validación de identidad nacional (RUT Chileno). Implementación de alto rendimiento en C++ nativo expuesto como API RESTful, garantizando integridad de datos y baja latencia en procesos de validación de usuarios.",
+  "estado": "Activo"
 }
 ]
