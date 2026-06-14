@@ -54,5 +54,13 @@
   "stack": ["Node.js", "Express", "Prisma-ORM", "React", "Framer-Motion", "Swagger"],
   "descripcion": "Plataforma educativa LXP (Learning Experience Platform) de arquitectura desacoplada. Implementa patrón Repository en backend, documentación técnica automatizada con Swagger y gestión de estado avanzada en frontend con Framer Motion.",
   "estado": "En Desarrollo"
+},
+{
+  "id": "nod-007",
+  "nombre": "IPv4 Subnet Orchestrator (Fullstack)",
+  "url": "https://youtu.be/DG93_JKQXi4",
+  "stack": ["Node.js", "Express", "React.js", "IP.js", "REST-API"],
+  "descripcion": "Herramienta de orquestación de red Fullstack. Incluye motor de cálculo CIDR en backend mediante API RESTful y una interfaz web reactiva para segmentación y planificación de topologías IPv4 con validación de entorno.",
+  "estado": "Activo"
 }
 ]
