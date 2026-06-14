@@ -118,5 +118,13 @@
   "stack": ["C++"],
   "descripcion": "Gestor local de credenciales de alta seguridad. Implementa algoritmos de generación de entropía para contraseñas robustas, con gestión dinámica de memoria para el ciclo de vida de los datos y persistencia en tiempo de ejecución.",
   "estado": "Activo"
+},
+{
+  "id": "nod-015",
+  "nombre": "Identity Auth System (Core C++)",
+  "url": "https://github.com/sloty00/LoginCpp",
+  "stack": ["C++"],
+  "descripcion": "Sistema de gestión de identidad y autenticación local. Implementa protocolos de registro y acceso con persistencia de archivos, sirviendo como núcleo de lógica para autenticación offline y sistemas de control de acceso basados en credenciales.",
+  "estado": "Activo"
 }
 ]
