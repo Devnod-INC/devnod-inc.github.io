@@ -1,0 +1,6 @@
+[
+  { "id": "svc-001", "label": "Arquitectura y Fullstack" },
+  { "id": "svc-002", "label": "Seguridad y Auditoría" },
+  { "id": "svc-003", "label": "Infraestructura de Redes" },
+  { "id": "svc-004", "label": "Consultoría Técnica" }
+]
