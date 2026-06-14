@@ -237,59 +237,57 @@ function inicializarProyectos() {
 }
 
 function inicializarContacto() {
-    // 1. Aseguramos el renderizado del DOM
-    setTimeout(() => {
-        const authArea = document.getElementById('auth-area');
-        const contactForm = document.getElementById('contactForm');
-        const btnLogin = document.getElementById('btn-login');
-        const selectServicio = document.getElementById('servicio');
-        const userInfo = document.getElementById('user-info');
-        
-        if (!authArea || !contactForm) return;
+    const checkAuth = setInterval(() => {
+        if (window.auth) {
+            clearInterval(checkAuth);
+            
+            const authArea = document.getElementById('auth-area');
+            const contactForm = document.getElementById('contactForm');
+            const btnLogin = document.getElementById('btn-login');
+            const selectServicio = document.getElementById('servicio');
+            const userInfo = document.getElementById('user-info');
+            
+            if (!authArea || !contactForm) return;
 
-        // 2. Gestionar estado de Firebase Auth
-        window.auth.onAuthStateChanged(user => {
-            if (user) {
-                // Usuario autenticado: ocultamos login, mostramos formulario
-                authArea.style.display = 'none';
-                contactForm.style.display = 'block';
-                
-                if (userInfo) userInfo.innerText = `Autenticado como: ${user.email}`;
-                
-                // Inyectamos datos en campos ocultos para Formspree
-                const nameInput = document.getElementById('user_name');
-                const emailInput = document.getElementById('user_email');
-                if (nameInput) nameInput.value = user.displayName || "Usuario Google";
-                if (emailInput) emailInput.value = user.email;
+            window.auth.onAuthStateChanged(user => {
+                if (user) {
+                    authArea.style.display = 'none';
+                    contactForm.style.display = 'block';
+                    
+                    if (userInfo) userInfo.innerText = `Autenticado como: ${user.email}`;
 
-                // 3. Cargar servicios (ya que el usuario está validado)
-                if (selectServicio) {
-                    fetch(`./data/servicios.json?v=${new Date().getTime()}`)
-                        .then(res => res.json())
-                        .then(servicios => {
-                            selectServicio.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
-                                servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
-                        })
-                        .catch(err => {
-                            console.error("Error al cargar servicios:", err);
-                            selectServicio.innerHTML = '<option value="error">Error al cargar servicios</option>';
-                        });
+                    const nameInput = document.getElementById('user_name');
+                    const emailInput = document.getElementById('user_email');
+                    if (nameInput) nameInput.value = user.displayName || "Usuario Google";
+                    if (emailInput) emailInput.value = user.email;
+
+                    if (selectServicio) {
+                        fetch(`./data/servicios.json?v=${new Date().getTime()}`)
+                            .then(res => res.json())
+                            .then(servicios => {
+                                selectServicio.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
+                                    servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
+                            })
+                            .catch(err => {
+                                console.error("Error al cargar servicios:", err);
+                                selectServicio.innerHTML = '<option value="error">Error al cargar servicios</option>';
+                            });
+                    }
+                } else {
+                    authArea.style.display = 'block';
+                    contactForm.style.display = 'none';
+                    
+                    if (btnLogin) {
+                        btnLogin.onclick = () => {
+                            const provider = new firebase.auth.GoogleAuthProvider();
+                            window.auth.signInWithPopup(provider)
+                                .catch(err => console.error("Error en login:", err));
+                        };
+                    }
                 }
-            } else {
-                // Usuario no autenticado: mostrar botón de login
-                authArea.style.display = 'block';
-                contactForm.style.display = 'none';
-                
-                if (btnLogin) {
-                    btnLogin.onclick = () => {
-                        const provider = new firebase.auth.GoogleAuthProvider();
-                        window.auth.signInWithPopup(provider)
-                            .catch(err => console.error("Error en login:", err));
-                    };
-                }
-            }
-        });
-    }, 100);
+            });
+        }
+    }, 50);
 }
 
 window.addEventListener('DOMContentLoaded', () => navegarA('home'));
