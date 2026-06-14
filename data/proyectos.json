@@ -38,5 +38,13 @@
   "stack": ["Java", "Spring-Boot", "JWT", "SQL", "Firebase"],
   "descripcion": "Sistema IAM de arquitectura híbrida. Combina la robustez de Spring Boot y SQL con la agilidad de Firebase para autenticación distribuida, gestión de sesiones sin estado (JWT) y despliegue escalable en entornos de nube.",
   "estado": "Activo"
+},
+{
+  "id": "nod-005",
+  "nombre": "Varto Lab: Entorno de I+D",
+  "url": "https://youtu.be/RqV9BkkoMdg",
+  "stack": ["Node.js", "Prisma-ORM", "React.js", "Active-Directory", "Firebase"],
+  "descripcion": "Banco de pruebas y laboratorio de arquitectura. Prototipo para auditoría de seguridad (JWT/IAM) y despliegue de módulos ES6, sirviendo como entorno de experimentación para la validación de tecnologías emergentes y buenas prácticas.",
+  "estado": "Activo"
 }
 ]
