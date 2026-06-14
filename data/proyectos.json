@@ -41,10 +41,18 @@
 },
 {
   "id": "nod-005",
-  "nombre": "Varto Lab: Entorno de I+D",
+  "nombre": "Varto Lab: Prototipo Fullstack Empresarial",
   "url": "https://youtu.be/RqV9BkkoMdg",
-  "stack": ["Node.js", "Prisma-ORM", "React.js", "Active-Directory", "Firebase"],
-  "descripcion": "Banco de pruebas y laboratorio de arquitectura. Prototipo para auditoría de seguridad (JWT/IAM) y despliegue de módulos ES6, sirviendo como entorno de experimentación para la validación de tecnologías emergentes y buenas prácticas.",
+  "stack": ["Node.js", "Express", "Prisma-ORM", "MySQL", "React.js", "Active-Directory", "Firebase"],
+  "descripcion": "Plataforma Fullstack de experimentación técnica. Implementa arquitectura Modelo-Repository en backend, autenticación híbrida (Active Directory/Firebase/JWT) y gestión de seguridad mediante roles, sirviendo como entorno de auditoría para despliegues empresariales.",
   "estado": "Activo"
+},
+{
+  "id": "nod-006",
+  "nombre": "VAcademy Fullstack Platform",
+  "url": "https://youtu.be/irr8NVixNuM",
+  "stack": ["Node.js", "Express", "Prisma-ORM", "React", "Framer-Motion", "Swagger"],
+  "descripcion": "Plataforma educativa LXP (Learning Experience Platform) de arquitectura desacoplada. Implementa patrón Repository en backend, documentación técnica automatizada con Swagger y gestión de estado avanzada en frontend con Framer Motion.",
+  "estado": "En Desarrollo"
 }
 ]
