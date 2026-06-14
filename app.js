@@ -212,27 +212,72 @@ function inicializarProyectos() {
     const gridContainer = document.getElementById('proyectos-grid');
     if (!gridContainer) return;
 
+    // Diccionario de mapeo tecnológico a Badges de Shields.io (Estilo Plastic)
+    const badgeMap = {
+        "HTML5": "https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white",
+        "CSS3": "https://img.shields.io/badge/css3-%231572B6.svg?style=plastic&logo=css3&logoColor=white",
+        "JavaScript": "https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E",
+        "TypeScript": "https://img.shields.io/badge/typescript-%23007ACC.svg?style=plastic&logo=typescript&logoColor=white",
+        "Node.js": "https://img.shields.io/badge/Node.js-%23339933.svg?style=plastic&logo=node.js&logoColor=white",
+        "Java": "https://img.shields.io/badge/java-%23ED8B00.svg?style=plastic&logo=openjdk&logoColor=white",
+        "C++": "https://img.shields.io/badge/C%2B%2B-%2300599C.svg?style=plastic&logo=c%2B%2B&logoColor=white",
+        "Markdown": "https://img.shields.io/badge/markdown-%23000000.svg?style=plastic&logo=markdown&logoColor=white",
+        "LaTeX": "https://img.shields.io/badge/latex-%23008080.svg?style=plastic&logo=latex&logoColor=white",
+        
+        // Mapeos adicionales basados en tu proyectos.json
+        "Express": "https://img.shields.io/badge/express-%23000000.svg?style=plastic&logo=express&logoColor=white",
+        "React": "https://img.shields.io/badge/react-%2320232a.svg?style=plastic&logo=react&logoColor=%2361DAFB",
+        "React.js": "https://img.shields.io/badge/react-%2320232a.svg?style=plastic&logo=react&logoColor=%2361DAFB",
+        "Spring-Boot": "https://img.shields.io/badge/spring_boot-%236DB33F.svg?style=plastic&logo=spring-boot&logoColor=white",
+        "MySQL": "https://img.shields.io/badge/mysql-%2300f.svg?style=plastic&logo=mysql&logoColor=white",
+        "Firebase": "https://img.shields.io/badge/firebase-%23039BE5.svg?style=plastic&logo=firebase&logoColor=orange",
+        "JWT": "https://img.shields.io/badge/JWT-black.svg?style=plastic&logo=JSON%20web%20tokens",
+        "Python": "https://img.shields.io/badge/python-%233776AB.svg?style=plastic&logo=python&logoColor=white",
+        "GitHub-Actions": "https://img.shields.io/badge/github%20actions-%232088FF.svg?style=plastic&logo=githubactions&logoColor=white",
+        "Linux-Systems": "https://img.shields.io/badge/linux-%23FCC624.svg?style=plastic&logo=linux&logoColor=black",
+        "GitOps": "https://img.shields.io/badge/gitops-%23000000.svg?style=plastic&logo=git&logoColor=white",
+        "Swagger": "https://img.shields.io/badge/-Swagger-%2385EA2D?style=plastic&logo=swagger&logoColor=black"
+    };
+
     // Consumo local desde tu estructura de carpetas
     fetch(`./data/proyectos.json?v=${new Date().getTime()}`)
         .then(res => res.json())
         .then(data => {
-            gridContainer.innerHTML = data.map(p => `
-                <article class="project-card">
-                    <div class="card-header">
-                        <h3>${p.nombre}</h3>
-                        <span style="color: ${p.estado === 'Activo' ? '#00ff9d' : '#ffc107'}">● ${p.estado}</span>
-                    </div>
-                    <p class="description">${p.descripcion}</p>
-                    <div class="stack-tags">
-                        ${p.stack.map(s => `<span>${s}</span>`).join('')}
-                    </div>
-                    <a href="${p.url}" target="_blank" class="btn-primary">Ver Documentación</a>
-                </article>
-            `).join('');
+            gridContainer.innerHTML = data.map(p => {
+                // Generar las etiquetas img de los badges correspondientes
+                const badgesHtml = p.stack.map(tech => {
+                    // Si existe en el mapa, usa esa URL; si no, construye uno genérico gris plano
+                    const badgeUrl = badgeMap[tech] || `https://img.shields.io/badge/${encodeURIComponent(tech)}-%2321262d.svg?style=plastic&logoColor=white`;
+                    return `<img src="${badgeUrl}" alt="${tech}" title="${tech}">`;
+                }).join('');
+
+                // Modificar el texto del botón si la propiedad está restringida
+                const isRestricted = p.url === "javascript:void(0);";
+                const btnText = isRestricted ? "Acceso Restringido" : "Ver Documentación";
+                const btnStyle = isRestricted ? "style='opacity: 0.6; cursor: not-allowed;'" : "";
+
+                return `
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>${p.nombre}</h3>
+                            <span style="color: ${p.estado === 'Activo' ? '#58a6ff' : '#ffa657'}; font-size: 0.85rem; font-weight: 500;">
+                                ● ${p.estado}
+                            </span>
+                        </div>
+                        <p class="description">${p.descripcion}</p>
+                        <div class="stack-tags">
+                            ${badgesHtml}
+                        </div>
+                        <a href="${p.url}" target="${isRestricted ? '_self' : '_blank'}" class="btn-primary" ${btnStyle}>
+                            ${btnText}
+                        </div>
+                    </article>
+                `;
+            }).join('');
         })
         .catch(err => {
             console.error("Error al cargar el catálogo local:", err);
-            gridContainer.innerHTML = `<p class="error-msg">Error: No se pudo cargar el registro de proyectos.</p>`;
+            gridContainer.innerHTML = `<p class="error-msg" style="color: #ff7b72; text-align: center; padding: 20px;">⚠️ Error: No se pudo cargar el registro de activos de red.</p>`;
         });
 }
 
