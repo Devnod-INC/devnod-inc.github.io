@@ -126,5 +126,13 @@
   "stack": ["C++"],
   "descripcion": "Sistema de gestión de identidad y autenticación local. Implementa protocolos de registro y acceso con persistencia de archivos, sirviendo como núcleo de lógica para autenticación offline y sistemas de control de acceso basados en credenciales.",
   "estado": "Activo"
+},
+{
+  "id": "nod-016",
+  "nombre": "Project Financial Manager (Core C++)",
+  "url": "https://github.com/sloty00/ProyectoAdminCpp",
+  "stack": ["C++"],
+  "descripcion": "Herramienta de gestión financiera y control de tiempos para proyectos de ingeniería. Implementa cálculos automatizados de costos (Tarifa H/H), cronogramas (Duración en días) y gestión de activos operativos.",
+  "estado": "Activo"
 }
 ]
