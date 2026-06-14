@@ -237,20 +237,29 @@ function inicializarProyectos() {
 }
 
 function inicializarContacto() {
-    const select = document.getElementById('servicio');
-    if (!select) return;
+    // Pequeño delay para asegurar que el navegador terminó de renderizar el innerHTML
+    setTimeout(() => {
+        const select = document.getElementById('servicio');
+        
+        if (!select) {
+            console.error("El elemento 'servicio' no existe en el DOM tras la navegación.");
+            return;
+        }
 
-    // Consumimos el nuevo archivo de servicios que definimos
-    fetch(`./data/servicios.json?v=${new Date().getTime()}`)
-        .then(res => res.json())
-        .then(servicios => {
-            select.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
-                servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
-        })
-        .catch(err => {
-            console.error("Error al cargar servicios para el formulario:", err);
-            select.innerHTML = '<option value="general">Soporte General</option>';
-        });
+        fetch(`./data/servicios.json?v=${new Date().getTime()}`)
+            .then(res => {
+                if (!res.ok) throw new Error("Archivo servicios.json no encontrado");
+                return res.json();
+            })
+            .then(servicios => {
+                select.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
+                    servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
+            })
+            .catch(err => {
+                console.error("Error al cargar servicios:", err);
+                select.innerHTML = '<option value="error">Error al cargar servicios</option>';
+            });
+    }, 100); // 100ms es suficiente para que el motor de renderizado complete la inyección
 }
 
 window.addEventListener('DOMContentLoaded', () => navegarA('home'));
