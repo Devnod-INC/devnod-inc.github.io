@@ -62,5 +62,13 @@
   "stack": ["Node.js", "Express", "React.js", "IP.js", "REST-API"],
   "descripcion": "Herramienta de orquestación de red Fullstack. Incluye motor de cálculo CIDR en backend mediante API RESTful y una interfaz web reactiva para segmentación y planificación de topologías IPv4 con validación de entorno.",
   "estado": "Activo"
+},
+{
+  "id": "nod-008",
+  "nombre": "Ecommerce Core API (Enterprise)",
+  "url": "javascript:void(0);",
+  "stack": ["Node.js", "Express", "MySQL", "JWT", "Swagger"],
+  "descripcion": "Motor transaccional desarrollado bajo estándares corporativos. API RESTful con implementación de paginación eficiente y seguridad JWT. *Proyecto de propiedad intelectual restringida (BICOM).* ",
+  "estado": "Activo"
 }
 ]
