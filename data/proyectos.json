@@ -134,5 +134,13 @@
   "stack": ["C++"],
   "descripcion": "Herramienta de gestión financiera y control de tiempos para proyectos de ingeniería. Implementa cálculos automatizados de costos (Tarifa H/H), cronogramas (Duración en días) y gestión de activos operativos.",
   "estado": "Activo"
+},
+{
+  "id": "nod-017",
+  "nombre": "DevNod-INC Digital Portfolio (S-Class)",
+  "url": "https://github.com/sloty00/sloty00.github.io",
+  "stack": ["Jekyll", "Python", "GitHub-Actions", "Firebase", "JavaScript-Async"],
+  "descripcion": "Plataforma de ingeniería de nivel Rango SSS. Arquitectura desacoplada Data-Driven con pipeline de automatización SOC (Security Operations Center) mediante Python, telemetría en tiempo real y despliegue GitOps automatizado.",
+  "estado": "Activo"
 }
 ]
