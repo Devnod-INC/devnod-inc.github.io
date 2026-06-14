@@ -244,21 +244,22 @@ function inicializarContacto() {
             const authArea = document.getElementById('auth-area');
             const contactForm = document.getElementById('contactForm');
             const btnLogin = document.getElementById('btn-login');
+            const btnSubmit = document.getElementById('btn-submit');
+            const successMsg = document.getElementById('success-message');
             const selectServicio = document.getElementById('servicio');
             const userInfo = document.getElementById('user-info');
             
             if (!authArea || !contactForm) return;
 
+            // 1. Gestión de estado de Firebase Auth
             window.auth.onAuthStateChanged(user => {
                 if (user) {
                     authArea.style.display = 'none';
                     contactForm.style.display = 'block';
                     if (userInfo) userInfo.innerText = `Autenticado como: ${user.email}`;
                     
-                    const nameInput = document.getElementById('user_name');
-                    const emailInput = document.getElementById('user_email');
-                    if (nameInput) nameInput.value = user.displayName || "Usuario Google";
-                    if (emailInput) emailInput.value = user.email;
+                    document.getElementById('user_name').value = user.displayName || "Usuario Google";
+                    document.getElementById('user_email').value = user.email;
 
                     fetch(`./data/servicios.json?v=${new Date().getTime()}`)
                         .then(res => res.json())
@@ -266,25 +267,47 @@ function inicializarContacto() {
                             selectServicio.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
                                 servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
                         })
-                        .catch(err => {
-                            console.error("Error al cargar servicios:", err);
-                        });
+                        .catch(err => console.error("Error al cargar servicios:", err));
                 } else {
                     authArea.style.display = 'block';
                     contactForm.style.display = 'none';
                     
-                    if (btnLogin) {
-                        btnLogin.onclick = async () => {
-                            try {
-                                // Importación dinámica de los métodos de Auth v12
-                                const { GoogleAuthProvider, signInWithPopup } = await import("https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js");
-                                const provider = new GoogleAuthProvider();
-                                await signInWithPopup(window.auth, provider);
-                            } catch (err) {
-                                console.error("Error en login:", err);
-                            }
-                        };
+                    btnLogin.onclick = async () => {
+                        try {
+                            const { GoogleAuthProvider, signInWithPopup } = await import("https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js");
+                            await signInWithPopup(window.auth, new GoogleAuthProvider());
+                        } catch (err) {
+                            console.error("Error en login:", err);
+                        }
+                    };
+                }
+            });
+
+            // 2. Gestión de envío AJAX (sin recarga)
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                btnSubmit.disabled = true;
+                btnSubmit.innerText = "Enviando al SOC...";
+
+                const formData = new FormData(contactForm);
+                try {
+                    const response = await fetch("https://formspree.io/f/xzdqyzba", {
+                        method: "POST",
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        contactForm.style.display = 'none';
+                        if (successMsg) successMsg.style.display = 'block';
+                    } else {
+                        throw new Error("Respuesta no OK de Formspree");
                     }
+                } catch (err) {
+                    console.error("Error de envío:", err);
+                    alert("Error en la transmisión. Intenta de nuevo.");
+                    btnSubmit.disabled = false;
+                    btnSubmit.innerText = "Enviar Solicitud al SOC";
                 }
             });
         }
