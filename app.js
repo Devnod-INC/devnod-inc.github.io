@@ -19,7 +19,8 @@ async function navegarA(pagina) {
             'mision_vision': inicializarMisionVision,
             'politica': inicializarPolitica,
             'acerca': inicializarAcerca,
-            'proyectos': inicializarProyectos
+            'proyectos': inicializarProyectos,
+            'contacto': inicializarContacto
         };
 
         if (inicializadores[pagina]) {
@@ -232,6 +233,23 @@ function inicializarProyectos() {
         .catch(err => {
             console.error("Error al cargar el catálogo local:", err);
             gridContainer.innerHTML = `<p class="error-msg">Error: No se pudo cargar el registro de proyectos.</p>`;
+        });
+}
+
+function inicializarContacto() {
+    const select = document.getElementById('servicio');
+    if (!select) return;
+
+    // Consumimos el nuevo archivo de servicios que definimos
+    fetch(`./data/servicios.json?v=${new Date().getTime()}`)
+        .then(res => res.json())
+        .then(servicios => {
+            select.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
+                servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
+        })
+        .catch(err => {
+            console.error("Error al cargar servicios para el formulario:", err);
+            select.innerHTML = '<option value="general">Soporte General</option>';
         });
 }
 
