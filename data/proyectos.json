@@ -110,5 +110,13 @@
   "stack": ["C++"],
   "descripcion": "Motor de cálculo de topologías de red de alto rendimiento. Implementa algoritmos de segmentación CIDR, cálculo de broadcast y gestión de subredes en C++ nativo, optimizado para diagnóstico de infraestructura y auditoría de sistemas de red sin dependencias externas.",
   "estado": "Activo"
+},
+{
+  "id": "nod-014",
+  "nombre": "Secure Password Vault (Core C++)",
+  "url": "https://github.com/sloty00/AdminPassSecCpp",
+  "stack": ["C++"],
+  "descripcion": "Gestor local de credenciales de alta seguridad. Implementa algoritmos de generación de entropía para contraseñas robustas, con gestión dinámica de memoria para el ciclo de vida de los datos y persistencia en tiempo de ejecución.",
+  "estado": "Activo"
 }
 ]
