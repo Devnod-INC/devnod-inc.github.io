@@ -1,1 +1,34 @@
+<section class="contact-node">
+    <div class="node-header">
+        <h1>Centro de Requerimientos Técnicos</h1>
+        <p>Canal directo con la arquitectura de DevNod-INC.</p>
+    </div>
 
+    <form id="contactForm" action="https://formspree.io/f/TU_ID_DE_FORMULARIO" method="POST">
+        <div class="form-group">
+            <label for="servicio">Categoría de Ingeniería:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Cargando servicios...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje">Detalle técnico del requerimiento:</label>
+            <textarea id="mensaje" name="mensaje" rows="8" placeholder="Describa el alcance, objetivo del nodo o consulta específica..." required></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Enviar Solicitud al SOC</button>
+        </div>
+    </form>
+</section>
+
+<style>
+    /* Estilos encapsulados para el nodo de contacto */
+    .contact-node { max-width: 600px; margin: 2rem auto; padding: 2rem; background: #0d1117; border: 1px solid #30363d; border-radius: 8px; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: #c9d1d9; font-weight: bold; }
+    .form-group select, .form-group textarea { width: 100%; padding: 0.8rem; background: #161b22; border: 1px solid #30363d; color: #fff; border-radius: 4px; }
+    .btn-primary { width: 100%; padding: 1rem; background: #238636; color: white; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+    .btn-primary:hover { background: #2ea043; }
+</style>
