@@ -6,6 +6,25 @@
     <title>DevNod-INC | Nodo de Soluciones Complejas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script type="module">
+  // Importa las funciones necesarias desde los SDKs
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDP-CJWvNvTmbHLvIVqEA2JLAW4AB1rS9k",
+    authDomain: "devnod-da8ac.firebaseapp.com",
+    projectId: "devnod-da8ac",
+    storageBucket: "devnod-da8ac.firebasestorage.app",
+    messagingSenderId: "550585960081",
+    appId: "1:550585960081:web:7749cd7b7b91a94701a130",
+    measurementId: "G-E5YTW24E91"
+  };
+
+  // Inicializar Firebase
+  const app = initializeApp(firebaseConfig);
+  window.auth = getAuth(app); // Exportamos auth a la ventana global para usarla en app.js
+</script>
 <body>
 
     <header class="main-header">
