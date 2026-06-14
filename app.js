@@ -237,29 +237,59 @@ function inicializarProyectos() {
 }
 
 function inicializarContacto() {
-    // Pequeño delay para asegurar que el navegador terminó de renderizar el innerHTML
+    // 1. Aseguramos el renderizado del DOM
     setTimeout(() => {
-        const select = document.getElementById('servicio');
+        const authArea = document.getElementById('auth-area');
+        const contactForm = document.getElementById('contactForm');
+        const btnLogin = document.getElementById('btn-login');
+        const selectServicio = document.getElementById('servicio');
+        const userInfo = document.getElementById('user-info');
         
-        if (!select) {
-            console.error("El elemento 'servicio' no existe en el DOM tras la navegación.");
-            return;
-        }
+        if (!authArea || !contactForm) return;
 
-        fetch(`./data/servicios.json?v=${new Date().getTime()}`)
-            .then(res => {
-                if (!res.ok) throw new Error("Archivo servicios.json no encontrado");
-                return res.json();
-            })
-            .then(servicios => {
-                select.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
-                    servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
-            })
-            .catch(err => {
-                console.error("Error al cargar servicios:", err);
-                select.innerHTML = '<option value="error">Error al cargar servicios</option>';
-            });
-    }, 100); // 100ms es suficiente para que el motor de renderizado complete la inyección
+        // 2. Gestionar estado de Firebase Auth
+        window.auth.onAuthStateChanged(user => {
+            if (user) {
+                // Usuario autenticado: ocultamos login, mostramos formulario
+                authArea.style.display = 'none';
+                contactForm.style.display = 'block';
+                
+                if (userInfo) userInfo.innerText = `Autenticado como: ${user.email}`;
+                
+                // Inyectamos datos en campos ocultos para Formspree
+                const nameInput = document.getElementById('user_name');
+                const emailInput = document.getElementById('user_email');
+                if (nameInput) nameInput.value = user.displayName || "Usuario Google";
+                if (emailInput) emailInput.value = user.email;
+
+                // 3. Cargar servicios (ya que el usuario está validado)
+                if (selectServicio) {
+                    fetch(`./data/servicios.json?v=${new Date().getTime()}`)
+                        .then(res => res.json())
+                        .then(servicios => {
+                            selectServicio.innerHTML = '<option value="">-- Seleccione una categoría --</option>' + 
+                                servicios.map(s => `<option value="${s.id}">${s.label}</option>`).join('');
+                        })
+                        .catch(err => {
+                            console.error("Error al cargar servicios:", err);
+                            selectServicio.innerHTML = '<option value="error">Error al cargar servicios</option>';
+                        });
+                }
+            } else {
+                // Usuario no autenticado: mostrar botón de login
+                authArea.style.display = 'block';
+                contactForm.style.display = 'none';
+                
+                if (btnLogin) {
+                    btnLogin.onclick = () => {
+                        const provider = new firebase.auth.GoogleAuthProvider();
+                        window.auth.signInWithPopup(provider)
+                            .catch(err => console.error("Error en login:", err));
+                    };
+                }
+            }
+        });
+    }, 100);
 }
 
 window.addEventListener('DOMContentLoaded', () => navegarA('home'));
