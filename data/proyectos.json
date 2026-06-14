@@ -86,5 +86,13 @@
   "stack": ["Node.js", "C++", "Node-GYP", "Express", "REST-API"],
   "descripcion": "Motor de validación de identidad nacional (RUT Chileno). Implementación de alto rendimiento en C++ nativo expuesto como API RESTful, garantizando integridad de datos y baja latencia en procesos de validación de usuarios.",
   "estado": "Activo"
+},
+{
+  "id": "nod-011",
+  "nombre": "Native Crypto Engine (C++ Addon)",
+  "url": "https://github.com/sloty00/EncryptPassNodejsCPP",
+  "stack": ["Node.js", "C++", "OpenSSL", "Node-GYP", "REST-API"],
+  "descripcion": "Motor de cifrado de alta seguridad. Implementación nativa en C++ integrada con OpenSSL para el procesamiento de contraseñas, proporcionando cifrado robusto y codificación Base64 en una arquitectura de API segura.",
+  "estado": "Activo"
 }
 ]
