@@ -21,9 +21,9 @@
   },
   "mision_vision": {
     "mision_titulo": "Nuestra Misión",
-    "mision_texto": "Ayudar a empresas de la región a resolver problemas reales de software e infraestructura, con soluciones a medida, seguras y sostenibles en el tiempo, sin venderles más complejidad de la que necesitan.",
+    "mision_texto": "Ayudar a empresas a resolver problemas reales de software e infraestructura, con soluciones a medida, seguras y sostenibles en el tiempo, sin venderles más complejidad de la que necesitan.",
     "vision_titulo": "Nuestra Visión",
-    "vision_texto": "Ser el referente local para pymes y empresas medianas que necesitan un desarrollador de confianza: alguien que entienda tanto el código como la infraestructura que lo sostiene."
+    "vision_texto": "Ser el referente para pymes y empresas medianas que necesitan un desarrollador de confianza: alguien que entienda tanto el código como la infraestructura que lo sostiene."
   },
   "politica": {
     "titulo": "Cómo Trabajo",
