@@ -12,7 +12,7 @@
   "quienes_somos": {
     "titulo": "Quiénes Somos",
     "subtitulo": "25 años de oficio en infraestructura y desarrollo, aplicados a problemas reales.",
-    "historia": "Soy José Vargas Oyarzun, ingeniero TI y desarrollador full-stack de Puerto Montt, con actividad independiente formal desde 2005. Trabajé en empresas que sostienen la economía de la Región de Los Lagos —telecomunicaciones, energía, salmonicultura— implementando desde sistemas de respaldo empresarial hasta plataformas de gestión a medida. DevNod-INC es la forma en que ofrezco ese mismo trabajo de manera directa, sin intermediarios.",
+    "historia": "Soy José Vargas, ingeniero TI y desarrollador full-stack de Puerto Montt, con actividad independiente formal desde 2005. Trabajé en empresas que sostienen la economía de la Región de Los Lagos —telecomunicaciones, energía, salmonicultura— implementando desde sistemas de respaldo empresarial hasta plataformas de gestión a medida. DevNod-INC es la forma en que ofrezco ese mismo trabajo de manera directa, sin intermediarios.",
     "valores": [
       { "concepto": "Desarrollo a Medida", "definición": "Sistemas backend y frontend en Java, Node.js, React y C++, construidos según lo que tu negocio realmente necesita." },
       { "concepto": "Datos Bien Guardados", "definición": "Combino bases de datos relacionales y no relacionales según el caso, para que tu información esté siempre accesible y ordenada." },
