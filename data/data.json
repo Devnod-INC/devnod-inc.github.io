@@ -1,52 +1,52 @@
 {
   "bienvenida": {
-    "titulo": "Infraestructura Digital de Alta Resiliencia",
-    "subtitulo": "Ciberseguridad Operacional y Rendimiento Crítico.",
-    "descripcion": "En DevNod-INC desarrollamos plataformas para entornos de alta complejidad. Garantizamos carga inmediata, protección de rutas mediante tokens propietarios (C++/JWT) y resiliencia total ante fallos de red o base de datos.",
+    "titulo": "Software e Infraestructura para Empresas que No Pueden Parar",
+    "subtitulo": "Desarrollo a medida, acceso seguro y respaldo de datos.",
+    "descripcion": "En DevNod-INC construyo sistemas a medida y protejo la información de tu empresa. Autenticación segura (C++/JWT), bases de datos con respaldo automático, y plataformas pensadas para seguir funcionando aunque falle la conexión o el servidor.",
     "pilares": [
-      { "icono": "⚙️", "titulo": "Ciberseguridad Operacional", "detalle": "Protección de rutas y gestión de identidades con tokens propietarios en C++ o JWT." },
-      { "icono": "🔒", "titulo": "Resiliencia Híbrida", "detalle": "Manejo de datos SQL/NoSQL con redundancia nativa en JSON para disponibilidad ante fallos." },
-      { "icono": "⚡", "titulo": "Rendimiento Crítico", "detalle": "Plataformas de alta velocidad funcional diseñadas para cargar en segundos bajo carga." }
+      { "icono": "⚙️", "titulo": "Acceso Seguro", "detalle": "Control de identidades y permisos con autenticación robusta (JWT), para que solo entre quien tiene que entrar." },
+      { "icono": "🔒", "titulo": "Datos Respaldados", "detalle": "Bases de datos SQL y NoSQL combinadas, con respaldo automático para que la información esté siempre disponible." },
+      { "icono": "⚡", "titulo": "Sistemas Rápidos", "detalle": "Plataformas optimizadas para responder rápido incluso con carga alta de usuarios." }
     ]
   },
   "quienes_somos": {
     "titulo": "Quiénes Somos",
-    "subtitulo": "Especialistas en continuidad operativa y blindaje digital.",
-    "historia": "DevNod-INC responde a la demanda de sistemas invulnerables. Combinamos la velocidad de arquitecturas desacopladas con el blindaje de seguridad a bajo nivel. Nuestra experiencia técnica en Java, Node.js, C++ y Python asegura que su operación no se detenga, sin importar las fallas externas.",
+    "subtitulo": "25 años de oficio en infraestructura y desarrollo, aplicados a problemas reales.",
+    "historia": "Soy José Vargas Oyarzun, ingeniero TI y desarrollador full-stack de Puerto Montt, con actividad independiente formal desde 2005. Trabajé en empresas que sostienen la economía de la Región de Los Lagos —telecomunicaciones, energía, salmonicultura— implementando desde sistemas de respaldo empresarial hasta plataformas de gestión a medida. DevNod-INC es la forma en que ofrezco ese mismo trabajo de manera directa, sin intermediarios.",
     "valores": [
-      { "concepto": "Blindaje Nivel C++", "definición": "Gestión de seguridad y tokens mediante módulos de alto rendimiento en C++." },
-      { "concepto": "Arquitectura Híbrida", "definición": "Redundancia inteligente de datos entre SQL y NoSQL estructurado en formato JSON." },
-      { "concepto": "Operación Ininterrumpida", "definición": "Sistemas diseñados para mantener la funcionalidad crítica incluso ante caídas de conectividad." }
+      { "concepto": "Desarrollo a Medida", "definición": "Sistemas backend y frontend en Java, Node.js, React y C++, construidos según lo que tu negocio realmente necesita." },
+      { "concepto": "Datos Bien Guardados", "definición": "Combino bases de datos relacionales y no relacionales según el caso, para que tu información esté siempre accesible y ordenada." },
+      { "concepto": "Continuidad del Negocio", "definición": "Diseño los sistemas para que sigan funcionando ante caídas de conexión o fallas puntuales, con respaldo pensado desde el inicio." }
     ]
   },
   "mision_vision": {
     "mision_titulo": "Nuestra Misión",
-    "mision_texto": "Garantizar la continuidad operativa de sistemas críticos mediante infraestructura desacoplada, seguridad avanzada y redundancia de datos ante cualquier escenario de crisis técnica.",
+    "mision_texto": "Ayudar a empresas de la región a resolver problemas reales de software e infraestructura, con soluciones a medida, seguras y sostenibles en el tiempo, sin venderles más complejidad de la que necesitan.",
     "vision_titulo": "Nuestra Visión",
-    "vision_texto": "Ser el estándar de desarrollo en plataformas de alta complejidad, donde la integridad del dato y la velocidad funcional nunca se vean comprometidas por fallos externos."
+    "vision_texto": "Ser el referente local para pymes y empresas medianas que necesitan un desarrollador de confianza: alguien que entienda tanto el código como la infraestructura que lo sostiene."
   },
   "politica": {
-    "titulo": "Políticas de Cumplimiento y Resolución",
-    "intro": "En DevNod-INC, la disponibilidad y la seguridad son los pilares de nuestra arquitectura.",
+    "titulo": "Cómo Trabajo",
+    "intro": "Tres principios simples que aplico en cada proyecto.",
     "secciones": [
-      { "titulo": "Ciberseguridad Operacional", "contenido": "Cumplimos con estándares de integridad mediante cifrado industrial y auditorías constantes en cada nodo de software desplegado." },
-      { "titulo": "Gestión de Datos Críticos", "contenido": "Protocolos de minimización y redundancia JSON, asegurando que la información sea accesible incluso ante la caída de bases de datos relacionales." },
-      { "titulo": "Protocolo de Resiliencia", "contenido": "Ante fallos de conectividad, activamos nuestra capa de persistencia local, priorizando la operatividad funcional sobre la dependencia del servidor." }
+      { "titulo": "Seguridad desde el Diseño", "contenido": "Cada sistema que entrego incluye control de accesos y buenas prácticas de seguridad desde el primer día, no como un parche después." },
+      { "titulo": "Respaldo de la Información", "contenido": "Antes de que la información se pierda por una falla, ya existe un plan para recuperarla. Lo aplico igual en un sistema chico que en uno grande." },
+      { "titulo": "Comunicación Clara", "contenido": "Si algo se cae o hay un problema, te aviso yo antes de que te des cuenta, y tenés un canal directo conmigo, no un ticket en una cola de soporte." }
     ]
   },
-"acerca": {
-    "titulo": "Stack Tecnológico y Seguridad",
-    "descripcion": "Ecosistema de ingeniería enfocado en resiliencia, velocidad y control total.",
+  "acerca": {
+    "titulo": "Con Qué Trabajo",
+    "descripcion": "Herramientas probadas en proyectos reales, elegidas según lo que cada problema necesita.",
     "tecnologias": [
-      { "nombre": "C++ / Java", "tag": "Cálculo, Seguridad y Spring/JPA", "color": "#00599c" },
-      { "nombre": "Node.js / React", "tag": "Orquestación y Fullstack", "color": "#8cc84b" },
-      { "nombre": "Python", "tag": "Automatización CI/CD Pipelines", "color": "#3776ab" },
-      { "nombre": "SQL / NoSQL", "tag": "Redundancia Cíclica y Persistencia", "color": "#00758f" },
-      { "nombre": "Angular", "tag": "Frontend Corporativo", "color": "#dd0031" }
+      { "nombre": "Java / Spring", "tag": "Aplicaciones empresariales robustas", "color": "#00599c" },
+      { "nombre": "C++", "tag": "Componentes de alto rendimiento (cálculo, validación en tiempo real)", "color": "#00599c" },
+      { "nombre": "Node.js / React / Angular", "tag": "Sistemas web completos, de backend a interfaz", "color": "#8cc84b" },
+      { "nombre": "Python", "tag": "Automatización de procesos e integración continua (CI/CD)", "color": "#3776ab" },
+      { "nombre": "SQL / NoSQL", "tag": "Bases de datos según estructura y volumen de la información", "color": "#00758f" }
     ],
     "seguridad": {
-      "titulo": "Protección de Acceso y Blindaje",
-      "texto": "Arquitectura de seguridad basada en módulos C++ y JWT, garantizando trazabilidad, integridad de datos y resiliencia mediante redundancia cíclica en sistemas críticos."
+      "titulo": "Acceso Seguro y Datos Respaldados",
+      "texto": "Construyo sistemas de autenticación (JWT, Active Directory) para controlar quién entra a tu información, y arquitecturas que siguen funcionando aunque se caiga la conexión o falle la base de datos principal. Todo esto lo apliqué antes en producción real, en empresas de telecomunicaciones, energía y salmonicultura."
     }
   }
 }
