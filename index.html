@@ -55,13 +55,47 @@
         <div class="loader-placeholder">Iniciando componentes del nodo...</div>
     </main>
 
-    <footer class="main-footer">
+<footer class="main-footer">
         <div class="footer-container">
+            <!-- Insignias de Stack Tecnológico -->
+            <div class="footer-stack">
+                <div class="stack-category">
+                    <span><strong>TI:</strong></span>
+                    <img src="https://img.shields.io/badge/SUSE-708090?logo=suse&logoColor=white" alt="SUSE">
+                    <img src="https://img.shields.io/badge/VMWare-607078?logo=vmware&logoColor=white" alt="VMWare">
+                    <img src="https://img.shields.io/badge/Kubernetes-326ce5?logo=kubernetes&logoColor=white" alt="K8s">
+                    <img src="https://img.shields.io/badge/Docker-2496ed?logo=docker&logoColor=white" alt="Docker">
+                    <img src="https://img.shields.io/badge/Sophos-0066cc?logo=sophos&logoColor=white" alt="Sophos">
+                    <img src="https://img.shields.io/badge/Veeam-000000?logo=veeam&logoColor=white" alt="Veeam">
+                </div>
+                <div class="stack-category">
+                    <span><strong>Desarrollo:</strong></span>
+                    <img src="https://img.shields.io/badge/C++-00599c?logo=cplusplus&logoColor=white" alt="C++">
+                    <img src="https://img.shields.io/badge/Python-3776ab?logo=python&logoColor=white" alt="Python">
+                    <img src="https://img.shields.io/badge/Java-f89820?logo=java&logoColor=white" alt="Java">
+                    <img src="https://img.shields.io/badge/JS-f7df1e?logo=javascript&logoColor=black" alt="JS">
+                    <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white" alt="NodeJS">
+                </div>
+                <div class="stack-category">
+                    <span><strong>Datos:</strong></span>
+                    <img src="https://img.shields.io/badge/SQL-4479a1?logo=postgresql&logoColor=white" alt="SQL">
+                    <img src="https://img.shields.io/badge/NoSQL-0064a5?logo=mongodb&logoColor=white" alt="NoSQL">
+                </div>
+            </div>
+
             <p>&copy; 2026 <strong>DevNod-INC</strong>. Todos los derechos reservados.</p>
             <p class="footer-meta">Infraestructura Distribuida y Desacoplada sobre GitHub Enterprise.</p>
         </div>
     </footer>
 
     <script src="app.js"></script>
+    <style>
+        .main-footer { padding: 2rem; background: #0d1117; border-top: 1px solid #30363d; text-align: center; }
+        .footer-stack { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        .stack-category { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; }
+        .stack-category span { color: #8b949e; font-size: 0.85rem; margin-right: 5px; }
+        .stack-category img { height: 20px; }
+        .footer-meta { color: #58a6ff; font-size: 0.9rem; margin-top: 10px; }
+    </style>
 </body>
 </html>
