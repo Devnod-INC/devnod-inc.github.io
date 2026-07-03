@@ -12,7 +12,7 @@
   "quienes_somos": {
     "titulo": "Quiénes Somos",
     "subtitulo": "25 años de oficio en infraestructura y desarrollo, aplicados a problemas reales.",
-    "historia": "Soy José Vargas, desarrollador full-stack, con actividad independiente formal desde 2005. Construyo software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Mi paso por infraestructura y redes me da una ventaja poco común: entiendo cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod-INC es la forma en que ofrezco ese trabajo de manera directa, sin intermediarios.",
+    "historia": "Soy José Vargas, desarrollador full-stack, con actividad independiente formal desde 2005. Construyo software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Mi paso por infraestructura y redes me da una ventaja poco común: entiendo cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod es la forma en que ofrezco ese trabajo de manera directa, sin intermediarios.",
     "valores": [
       { "concepto": "Desarrollo a Medida", "definición": "Sistemas backend y frontend en Java, Node.js, React y C++, construidos según lo que tu negocio realmente necesita." },
       { "concepto": "Datos Bien Guardados", "definición": "Combino bases de datos relacionales y no relacionales según el caso, para que tu información esté siempre accesible y ordenada." },
