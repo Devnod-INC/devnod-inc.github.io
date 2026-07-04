@@ -21,9 +21,9 @@
   },
   "mision_vision": {
     "mision_titulo": "Nuestra Misión",
-    "mision_texto": "Ayudar a empresas a resolver problemas reales de software e infraestructura, con soluciones a medida, seguras y sostenibles en el tiempo, sin venderles más complejidad de la que necesitan.",
+    "mision_texto": "Ayudar a empresas a resolver problemas reales de software e infraestructura, con soluciones a medida, seguras y sostenibles en el tiempo.",
     "vision_titulo": "Nuestra Visión",
-    "vision_texto": "Ser el referente para pymes y empresas medianas que necesitan un desarrollador de confianza: alguien que entienda tanto el código como la infraestructura que lo sostiene."
+    "vision_texto": "Ser el referente para pymes y empresas que necesitan desarrolladores de confianza: personas que entiendan tanto el código como la infraestructura que lo sostiene."
   },
   "politica": {
     "titulo": "Cómo Trabajo",
@@ -31,7 +31,7 @@
     "secciones": [
       { "titulo": "Seguridad desde el Diseño", "contenido": "Cada sistema que entrego incluye control de accesos y buenas prácticas de seguridad desde el primer día, no como un parche después." },
       { "titulo": "Respaldo de la Información", "contenido": "Antes de que la información se pierda por una falla, ya existe un plan para recuperarla. Lo aplico igual en un sistema chico que en uno grande." },
-      { "titulo": "Comunicación Clara", "contenido": "Si algo se cae o hay un problema, te aviso yo antes de que te des cuenta, y tenés un canal directo conmigo, no un ticket en una cola de soporte." }
+      { "titulo": "Comunicación Clara", "contenido": "Si algo se cae o hay un problema, te aviso yo antes de que te des cuenta, y tienes un canal directo conmigo, no un ticket en una cola de soporte." }
     ]
   },
   "acerca": {
