@@ -18,7 +18,7 @@
   {
   "id": "nod-003",
   "nombre": "Monitor Central",
-  "url": "https://github.com/sloty00/monitor-central",
+  "url": "https://sloty00.github.io/monitor-central/",
   "stack": ["Orquestación", "Linux-Systems", "Ofuscación", "High-Availability"],
   "descripcion": "Núcleo de comando para la orquestación de sistemas. Implementa protocolos de visibilidad en tiempo real y capas de seguridad mediante ofuscación para proteger la lógica operativa y garantizar la integridad de los procesos en entornos críticos.",
   "estado": "Activo"
