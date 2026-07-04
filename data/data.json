@@ -1,7 +1,7 @@
 {
   "bienvenida": {
-    "titulo": "Software e Infraestructura para Empresas.",
-    "subtitulo": "Desarrollo a medida, acceso seguro y respaldo de datos.",
+    "titulo": "Infraestructura y Software para tu Crecimiento.",
+    "subtitulo": "Desarrollamos soluciones seguras, respaldadas y diseñadas para durar.",
     "descripcion": "En DevNod construyo sistemas a medida y protejo la información de tu empresa. Autenticación segura (C++/JWT), bases de datos con respaldo automático, y plataformas pensadas para seguir funcionando aunque falle la conexión o el servidor.",
     "pilares": [
       { "icono": "⚙️", "titulo": "Acceso Seguro", "detalle": "Control de identidades y permisos con autenticación robusta (JWT), para que solo entre quien tiene que entrar." },
