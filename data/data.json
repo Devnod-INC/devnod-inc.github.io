@@ -38,7 +38,7 @@
     "titulo": "Con Qué Trabajo",
     "descripcion": "Herramientas probadas en proyectos reales, elegidas según lo que cada problema necesita.",
     "tecnologias": [
-      { "nombre": "Java / Spring", "tag": "Aplicaciones empresariales robustas", "color": "#00599c" },
+      { "nombre": "Java / Spring", "tag": "Aplicaciones empresariales robustas, Ideal para arquitecturas de alta disponibilidad y sistemas transaccionales", "color": "#00599c" },
       { "nombre": "C++", "tag": "Componentes de alto rendimiento (cálculo, validación en tiempo real)", "color": "#00599c" },
       { "nombre": "Node.js / React / Angular", "tag": "Sistemas web completos, de backend a interfaz", "color": "#8cc84b" },
       { "nombre": "Python", "tag": "Automatización de procesos e integración continua (CI/CD)", "color": "#3776ab" },
