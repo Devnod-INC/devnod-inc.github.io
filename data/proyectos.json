@@ -137,10 +137,18 @@
 },
 {
   "id": "nod-017",
-  "nombre": "DevNod-INC Digital Portfolio (S-Class)",
+  "nombre": "Portfolio Personal (S-Class)",
   "url": "https://sloty00.github.io/",
   "stack": ["Jekyll", "Python", "GitHub-Actions", "Firebase", "JavaScript-Async"],
   "descripcion": "Plataforma de ingeniería de nivel Rango SSS. Arquitectura desacoplada Data-Driven con pipeline de automatización SOC (Security Operations Center) mediante Python, telemetría en tiempo real y despliegue GitOps automatizado.",
+  "estado": "Activo"
+},
+{
+  "id": "nod-018",
+  "nombre": "Calculadora Subred en Produccion.",
+  "url": "https://sloty00.github.io/nod-014-netcalc/",
+  "stack": ["Jekyll", "Python", "GitHub-Actions"],
+  "descripcion": "Plataforma de ingeniería. Arquitectura desacoplada Data-Driven con pipeline de automatización SOC (Security Operations Center) mediante Python, telemetría en tiempo real y despliegue GitOps automatizado para calculo de redes.",
   "estado": "Activo"
 }
 ]
