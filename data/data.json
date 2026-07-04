@@ -21,9 +21,9 @@
   },
   "mision_vision": {
     "mision_titulo": "Nuestra Misión",
-    "mision_texto": "Ayudar a empresas a resolver problemas reales de software e infraestructura, con soluciones a medida, seguras y sostenibles en el tiempo.",
+    "mision_texto": "Resolver problemas reales de software e infraestructura con soluciones a medida. Nos enfocamos en entregar sistemas seguros, robustos y sostenibles, diseñados para crecer a la par de tu negocio.",
     "vision_titulo": "Nuestra Visión",
-    "vision_texto": "Ser el referente para pymes y empresas que necesitan desarrolladores de confianza: personas que entiendan tanto el código como la infraestructura que lo sostiene."
+    "vision_texto": "Convertirnos en el aliado estratégico de empresas que buscan confianza técnica. Buscamos cerrar la brecha entre el desarrollo de aplicaciones y la estabilidad de la infraestructura, asegurando que cada línea de código tenga una base sólida donde operar."
   },
   "politica": {
     "titulo": "Cómo Trabajo",
