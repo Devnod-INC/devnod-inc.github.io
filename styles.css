@@ -333,3 +333,16 @@ body {
         font-size: 0.85rem;
     }
 }
+
+.feature-card {
+    background: var(--bg-header);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
