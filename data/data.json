@@ -2,7 +2,7 @@
   "bienvenida": {
     "titulo": "Infraestructura y Software para tu Crecimiento.",
     "subtitulo": "Desarrollamos soluciones seguras, respaldadas y diseñadas para durar.",
-    "descripcion": "En DevNod construyo sistemas a medida y protejo la información de tu empresa. Autenticación segura (C++/JWT), bases de datos con respaldo automático, y plataformas pensadas para seguir funcionando aunque falle la conexión o el servidor.",
+    "descripcion": "En DevNod construimos sistemas a medida y protejemos la información de su empresa. Autenticación segura (C++/JWT), bases de datos con respaldo automático, y plataformas pensadas para seguir funcionando aunque falle la conexión o el servidor.",
     "pilares": [
       { "icono": "⚙️", "titulo": "Acceso Seguro", "detalle": "Control de identidades y permisos con autenticación robusta (JWT), para que solo entre quien tiene que entrar." },
       { "icono": "🔒", "titulo": "Datos Respaldados", "detalle": "Bases de datos SQL y NoSQL combinadas, con respaldo automático para que la información esté siempre disponible." },
@@ -12,7 +12,7 @@
   "quienes_somos": {
     "titulo": "Quiénes Somos",
     "subtitulo": "25 años de oficio en infraestructura y desarrollo, aplicados a problemas reales.",
-    "historia": "Soy José Vargas, desarrollador full-stack, con actividad independiente formal desde 2005. Construyo software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Mi paso por infraestructura y redes me da una ventaja poco común: entiendo cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod es la forma en que ofrezco ese trabajo de manera directa, sin intermediarios.",
+    "historia": "Soy José Vargas, desarrollador full-stack, con actividad independiente formal desde 2004, con estado.: Estado: Cumple sus obligaciones tributarias. Construyo software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Mi paso por infraestructura y redes me da una ventaja poco común: entiendo cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod es la forma en que ofrezco ese trabajo de manera directa, sin intermediarios.",
     "valores": [
       { "concepto": "Desarrollo a Medida", "definición": "Sistemas backend y frontend en Java, Node.js, React y C++, construidos según lo que tu negocio realmente necesita." },
       { "concepto": "Datos Bien Guardados", "definición": "Combino bases de datos relacionales y no relacionales según el caso, para que tu información esté siempre accesible y ordenada." },
