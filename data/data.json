@@ -31,7 +31,7 @@
     "secciones": [
       { "titulo": "Seguridad desde el Diseño", "contenido": "Cada sistema que entregamos incluye control de accesos y buenas prácticas de seguridad desde el primer día, no como un parche después." },
       { "titulo": "Respaldo de la Información", "contenido": "Antes de que la información se pierda por una falla, ya existe un plan para recuperarla. Lo aplicamos igual en un sistema chico que en uno grande." },
-      { "titulo": "Comunicación Clara", "contenido": "Si algo se cae o hay un problema, te aviso yo antes de que te des cuenta, y tienes un canal directo con nosotros, no un ticket en una cola interminable, mantenemos un margen controlables de proyectos." }
+      { "titulo": "Comunicación Clara", "contenido": "Si algo se cae o hay un problema, te avisamos antes de que te des cuenta, y tienes un canal directo con nosotros, no un ticket en una cola interminable, mantenemos un margen controlables de proyectos." }
     ]
   },
   "acerca": {
