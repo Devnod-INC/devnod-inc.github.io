@@ -150,5 +150,13 @@
   "stack": ["Jekyll", "Python", "GitHub-Actions"],
   "descripcion": "Plataforma de ingeniería. Arquitectura desacoplada Data-Driven con pipeline de automatización SOC (Security Operations Center) mediante Python, telemetría en tiempo real y despliegue GitOps automatizado para calculo de redes.",
   "estado": "Activo"
+},
+{
+  "id": "nod-019",
+  "nombre": "Metricas CD/CI Githubs.",
+  "url": "https://sloty00.github.io/metrics_github/",
+  "stack": ["Jekyll", "Python", "GitHub-Actions", "Javascript"],
+  "descripcion": "Plataforma de visualización de métricas de desarrollo en tiempo real. Utiliza una arquitectura desacoplada para extraer, procesar y presentar datos de actividad de usuario mediante un pipeline automatizado de Python y despliegue continuo.",
+  "estado": "Activo"
 }
 ]
