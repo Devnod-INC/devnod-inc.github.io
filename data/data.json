@@ -46,7 +46,7 @@
     ],
     "seguridad": {
       "titulo": "Acceso Seguro y Datos Respaldados",
-      "texto": "Construyo sistemas de autenticación (JWT, Active Directory) para controlar quién entra a tu información, y arquitecturas que siguen funcionando aunque se caiga la conexión o falle la base de datos principal. Todo esto lo apliqué antes en producción real, en empresas de telecomunicaciones, energía y salmonicultura."
+      "texto": "Construimos sistemas de autenticación (JWT, Active Directory) para controlar quién entra a tu información, y arquitecturas que siguen funcionando aunque se caiga la conexión o falle la base de datos principal. Todo esto lo apliqué antes en producción real, en empresas de telecomunicaciones, energía y salmonicultura."
     }
   }
 }
