@@ -12,7 +12,7 @@
   "quienes_somos": {
     "titulo": "Quiénes Somos",
     "subtitulo": "25 años de oficio en infraestructura y desarrollo, aplicados a problemas reales.",
-    "historia": "Hacemos "desarrollo full-stack", con actividad independiente formal desde 2004, cumpliendo y al dia con mis obligaciones tributarias. Construimos software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Entendemos infraestructura y redes: Entendemos cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod es la forma en que ofrecemos ese trabajo de manera directa, sin intermediarios.",
+    "historia": "Hacemos desarrollo full-stack, backend y devops, con actividad independiente formal desde 2004, cumpliendo y al dia con mis obligaciones tributarias. Construimos software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Entendemos infraestructura y redes: Entendemos cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod es la forma en que ofrecemos ese trabajo de manera directa, sin intermediarios.",
     "valores": [
       { "concepto": "Desarrollo a Medida", "definición": "Sistemas backend y frontend en Java, Node.js, React y C++, construidos según lo que tu negocio realmente necesita." },
       { "concepto": "Datos Bien Guardados", "definición": "Combino bases de datos relacionales y no relacionales según el caso, para que tu información esté siempre accesible y ordenada." },
