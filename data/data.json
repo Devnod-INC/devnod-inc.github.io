@@ -12,7 +12,7 @@
   "quienes_somos": {
     "titulo": "Quiénes Somos",
     "subtitulo": "25 años de oficio en infraestructura y desarrollo, aplicados a problemas reales.",
-    "historia": "Soy José Vargas, desarrollador full-stack, con actividad independiente formal desde 2004, cumpliendo y al dia con mis obligaciones tributarias. Construyo software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Mi paso por infraestructura y redes me da una ventaja poco común: entiendo cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod es la forma en que ofrezco ese trabajo de manera directa, sin intermediarios.",
+    "historia": "Hacemos "desarrollo full-stack", con actividad independiente formal desde 2004, cumpliendo y al dia con mis obligaciones tributarias. Construimos software a medida — sistemas de gestión, plataformas web y herramientas internas — para empresas que necesitan resolver un problema real, no una plantilla genérica. Entendemos infraestructura y redes: Entendemos cómo se sostiene un sistema en producción, no solo cómo se programa. DevNod es la forma en que ofrecemos ese trabajo de manera directa, sin intermediarios.",
     "valores": [
       { "concepto": "Desarrollo a Medida", "definición": "Sistemas backend y frontend en Java, Node.js, React y C++, construidos según lo que tu negocio realmente necesita." },
       { "concepto": "Datos Bien Guardados", "definición": "Combino bases de datos relacionales y no relacionales según el caso, para que tu información esté siempre accesible y ordenada." },
@@ -26,16 +26,16 @@
     "vision_texto": "Convertirnos en el aliado estratégico de empresas que buscan confianza técnica. Buscamos cerrar la brecha entre el desarrollo de aplicaciones y la estabilidad de la infraestructura, asegurando que cada línea de código tenga una base sólida donde operar."
   },
   "politica": {
-    "titulo": "Cómo Trabajo",
+    "titulo": "Cómo Trabajamos",
     "intro": "Tres principios simples que aplico en cada proyecto.",
     "secciones": [
-      { "titulo": "Seguridad desde el Diseño", "contenido": "Cada sistema que entrego incluye control de accesos y buenas prácticas de seguridad desde el primer día, no como un parche después." },
-      { "titulo": "Respaldo de la Información", "contenido": "Antes de que la información se pierda por una falla, ya existe un plan para recuperarla. Lo aplico igual en un sistema chico que en uno grande." },
+      { "titulo": "Seguridad desde el Diseño", "contenido": "Cada sistema que entregamos incluye control de accesos y buenas prácticas de seguridad desde el primer día, no como un parche después." },
+      { "titulo": "Respaldo de la Información", "contenido": "Antes de que la información se pierda por una falla, ya existe un plan para recuperarla. Lo aplicamos igual en un sistema chico que en uno grande." },
       { "titulo": "Comunicación Clara", "contenido": "Si algo se cae o hay un problema, te aviso yo antes de que te des cuenta, y tienes un canal directo con nosotros, no un ticket en una cola interminable, mantenemos un margen controlables de proyectos." }
     ]
   },
   "acerca": {
-    "titulo": "Con Qué Trabajo",
+    "titulo": "Con Qué Trabajamos",
     "descripcion": "Herramientas probadas en proyectos reales, elegidas según lo que cada problema necesita.",
     "tecnologias": [
       { "nombre": "Java / Spring", "tag": "Aplicaciones empresariales robustas, Ideal para arquitecturas de alta disponibilidad y sistemas transaccionales", "color": "#00599c" },
