@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://devnod-inc.github.io/sitemap.xml
