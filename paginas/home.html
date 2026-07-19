@@ -73,18 +73,25 @@
 
 <!-- Carga de fuente externa para el estilo vintage -->
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
 <script>
-    (function() {
-        // Buscamos el elemento específicamente en este archivo
-        var carouselElement = document.getElementById('carouselExampleFade');
-        
-        // Si el elemento existe, inicializamos el carrusel de Bootstrap manualmente
-        if (carouselElement && typeof bootstrap !== 'undefined') {
-            new bootstrap.Carousel(carouselElement, {
-                interval: 5000,
+    // Forzar la inicialización del carrusel una vez que todo el DOM esté listo
+    window.addEventListener('load', function() {
+        var myCarousel = document.querySelector('#carouselExampleFade');
+        if (myCarousel) {
+            // Destruir instancia previa si existe y crear una nueva
+            var carousel = bootstrap.Carousel.getInstance(myCarousel);
+            if (carousel) {
+                carousel.dispose();
+            }
+            new bootstrap.Carousel(myCarousel, {
+                interval: 3000, // Lo puse en 3s para que pruebes rápido si gira
                 ride: 'carousel',
                 pause: false
             });
+            console.log("Carrusel forzado exitosamente");
+        } else {
+            console.error("No se encontró el elemento #carouselExampleFade");
         }
-    })();
+    });
 </script>
