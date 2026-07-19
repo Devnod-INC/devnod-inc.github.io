@@ -1,5 +1,13 @@
 [
   {
+    "id": "nod-000",
+    "nombre": "Gestor de Proyectos",
+    "url": "https://sloty00.github.io/gestion_proyectos/",
+    "stack": ["MVC", "Bootstrap-5", "Data-Driven", "Node.js", "Json"],
+    "descripcion": "Panel de control profesional diseñado para la gestión integral de proyectos, optimizado para el seguimiento de tiempos, facturación dinámica y control de avance por fases bajo arquitectura MVC.",
+    "estado": "Activo"
+  },
+  {
     "id": "nod-001",
     "nombre": "DevNod Ops Center",
     "url": "https://sloty00.github.io/projects/",
