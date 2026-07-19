@@ -65,15 +65,14 @@
 <script>
     (function() {
         const container = document.getElementById('carousel-images');
-        // Genera los 9 items de forma dinámica
-        for (let i = 1; i <= 9; i++) {
-            const activeClass = (i === 1) ? 'active' : '';
-            container.innerHTML += `
-                <div class="carousel-item ${activeClass}">
-                    <img src="../images/VINTAGE${i}.jpg" class="d-block w-100" alt="Vintage ${i}">
-                </div>
-            `;
-        }
+        
+        // Cargamos solo la primera imagen para probar la ruta
+        container.innerHTML = `
+            <div class="carousel-item active">
+                <img src="../images/VINTAGE1.jpg" class="d-block w-100" alt="Vintage 1">
+            </div>
+        `;
+        console.log("Cargando imagen: ../images/VINTAGE1.jpg");
     })();
 </script>
 
