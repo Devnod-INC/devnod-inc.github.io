@@ -1,13 +1,10 @@
-<!-- Estructura del Carrusel -->
-<section id="banner-container" class="hero-banner" style="background: #333; width: 100%; aspect-ratio: 21/9; border-radius: 8px; margin-bottom: 40px; position: relative;">
-    <div id="banner-layer" style="position: absolute; top:0; left:0; width:100%; height:100%; background-size: cover; background-position: center; transition: opacity 1.5s;"></div>
-    <div style="position: absolute; top:0; left:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; color:white; z-index:2;">
-        <h2>Depurando...</h2>
-    </div>
+<section id="banner-container" class="hero-banner" style="position: relative; width: 100%; aspect-ratio: 21 / 9; border-radius: 8px; margin-bottom: 40px; overflow: hidden; background: #000;">
+    <!-- Esta es la capa que llevará la imagen -->
+    <div id="banner-layer" style="width: 100%; height: 100%; background-size: cover; background-position: center; transition: opacity 1.5s ease-in-out;"></div>
     
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <h2 class="banner-text">Brindando servicios desde 2004</h2>
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 2; background: rgba(0,0,0,0.6);">
+        <div style="text-align: center; color: white;">
+            <h2 style="font-family: 'Courier Prime', monospace; font-size: 2.5rem;">Brindando servicios desde 2004</h2>
             <p>Infraestructura y Software para tu Crecimiento.</p>
         </div>
     </div>
@@ -53,23 +50,10 @@
 </style>
 
 <script>
-    window.onload = function() {
-        const layer = document.getElementById('banner-layer');
-        const testUrl = '../images/VINTAGE1.jpg';
-        
-        console.log("Intentando cargar:", testUrl);
-        
-        const img = new Image();
-        img.onload = function() {
-            console.log("✅ Imagen cargada correctamente por el navegador");
-            layer.style.backgroundImage = "url('" + testUrl + "')";
-        };
-        img.onerror = function() {
-            console.error("❌ ERROR: El navegador no pudo encontrar la imagen en:", testUrl);
-            alert("Error: No se encuentra la imagen en " + testUrl);
-        };
-        img.src = testUrl;
-    };
+    // Inyección directa y simple
+    const layer = document.getElementById('banner-layer');
+    layer.style.backgroundImage = "url('../images/VINTAGE1.jpg')";
+    console.log("Script ejecutado: URL aplicada a", layer);
 </script>
 
 <!-- Carga de fuente externa para el estilo vintage -->
