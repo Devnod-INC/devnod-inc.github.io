@@ -9,10 +9,10 @@
   },
   {
     "id": "nod-001",
-    "nombre": "DevNod Ops Center",
-    "url": "https://sloty00.github.io/projects/",
-    "stack": ["GitOps", "Project-Management", "Data-Tracking"],
-    "descripcion": "Motor de control de gestión y operaciones automatizado. Realiza seguimiento en tiempo real de avance de fases, horas hombre (H/H) y valorización de proyectos bajo metodología ágil.",
+    "nombre": "Calculadora IPv6 Profesional",
+    "url": "https://sloty00.github.io/Calculadora-IPv6/",
+    "stack": ["FastAPI", "Python-Core", "CI-CD-Actions", "Networking"],
+    "descripcion": "Middleware de red de alto rendimiento para segmentación IPv6. Implementa validación estricta, arquitectura desacoplada con FastAPI y pipeline automatizado de pruebas unitarias.",
     "estado": "Activo"
   },
   {
