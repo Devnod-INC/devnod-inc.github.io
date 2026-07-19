@@ -1,6 +1,7 @@
 <section id="banner-container" class="hero-banner" style="position: relative; width: 100%; aspect-ratio: 21 / 9; border-radius: 8px; margin-bottom: 40px; overflow: hidden; background: #000;">
-    <!-- FORZAMOS LA CARGA: Ponemos la imagen aquí mismo -->
-    <img src="../images/VINTAGE1.jpg" alt="Vintage" style="width: 100%; height: 100%; object-fit: cover;">
+    
+    <!-- Imagen dinámica controlada por JS -->
+    <img id="banner-img" src="../images/VINTAGE1.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 1.5s ease-in-out;" alt="Vintage">
     
     <!-- Texto encima -->
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 2; background: rgba(0,0,0,0.6);">
@@ -49,6 +50,25 @@
     .hero-content { text-align: center; color: white; }
     .banner-text { font-family: 'Courier Prime', monospace; font-size: 2.5rem; }
 </style>
+
+<script>
+    (function() {
+        const imgElement = document.getElementById('banner-img');
+        let i = 1;
+
+        setInterval(() => {
+            // Desvanecer
+            imgElement.style.opacity = 0;
+
+            setTimeout(() => {
+                i = (i % 9) + 1;
+                imgElement.src = `../images/VINTAGE${i}.jpg`;
+                // Aparecer
+                imgElement.style.opacity = 1;
+            }, 1500); // Tiempo de la transición CSS
+        }, 5000);
+    })();
+</script>
 
 <!-- Carga de fuente externa para el estilo vintage -->
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
