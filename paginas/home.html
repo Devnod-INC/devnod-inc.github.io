@@ -1,5 +1,8 @@
 <!-- Estructura del Carrusel -->
 <section id="banner-container" class="hero-banner">
+    <!-- Capa interna para el efecto de transición -->
+    <div id="banner-layer" class="banner-layer"></div>
+    
     <div class="hero-overlay">
         <div class="hero-content">
             <h2 class="banner-text">Brindando servicios desde 2004</h2>
@@ -14,30 +17,25 @@
 </section>
 
 <style>
-    /* Aseguramos que el carrusel ocupe el mismo espacio que tu banner antiguo */
-    #heroCarousel {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 21 / 9; /* Esto mantiene la proporción original */
-        border-radius: 8px;
-        margin-bottom: 40px;
-        overflow: hidden;
-    }
-
 .hero-banner {
         position: relative;
         width: 100%;
         aspect-ratio: 21 / 9;
-        background-image: url('/images/VINTAGE1.jpg'); /* Ruta comprobada */
-        background-size: cover;
-        background-position: center;
         border-radius: 8px;
         margin-bottom: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-image 1s ease-in-out;
+        overflow: hidden; /* Importante para que la imagen no se salga */
+        background: #000;
     }
+
+    .banner-layer {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 1.5s ease-in-out; /* Esta es la clave de la transición */
+        z-index: 1;
+    }
+
     .hero-overlay {
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
@@ -45,39 +43,33 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 1;
-    }
-    .hero-content { z-index: 2; text-align: center; color: white; }
-    .banner-text { font-family: 'Courier Prime', monospace; font-size: 2.5rem; }
-
-    /* Forzamos a la imagen a rellenar el carrusel */
-    .carousel-inner, .carousel-item {
-        width: 100%;
-        height: 100%;
-    }
-
-    .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Esto es vital para que no se deforme */
+        z-index: 2;
     }
     
-    .banner-text {
-        font-family: 'Courier Prime', monospace;
-        font-size: 2.5rem;
-    }
+    .hero-content { text-align: center; color: white; }
+    .banner-text { font-family: 'Courier Prime', monospace; font-size: 2.5rem; }
 </style>
 
 <script>
     (function() {
-        const banner = document.getElementById('banner-container');
+        const layer = document.getElementById('banner-layer');
         let i = 1;
         
-        // Cambia la imagen cada 5 segundos
-        setInterval(() => {
+        // Función para cambiar imagen con desvanecimiento
+        function changeImage() {
             i = (i % 9) + 1;
-            banner.style.backgroundImage = `url('/images/VINTAGE${i}.jpg')`;
-        }, 5000);
+            // Primero desvanecemos
+            layer.style.opacity = 0;
+            
+            setTimeout(() => {
+                layer.style.backgroundImage = `url('/images/VINTAGE${i}.jpg')`;
+                layer.style.opacity = 1; // Luego volvemos a mostrar
+            }, 1500); // El tiempo coincide con la transición CSS
+        }
+
+        // Inicializar
+        layer.style.backgroundImage = "url('/images/VINTAGE1.jpg')";
+        setInterval(changeImage, 5000);
     })();
 </script>
 
