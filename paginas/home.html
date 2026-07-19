@@ -73,3 +73,18 @@
 
 <!-- Carga de fuente externa para el estilo vintage -->
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+<script>
+    (function() {
+        // Buscamos el elemento específicamente en este archivo
+        var carouselElement = document.getElementById('carouselExampleFade');
+        
+        // Si el elemento existe, inicializamos el carrusel de Bootstrap manualmente
+        if (carouselElement && typeof bootstrap !== 'undefined') {
+            new bootstrap.Carousel(carouselElement, {
+                interval: 5000,
+                ride: 'carousel',
+                pause: false
+            });
+        }
+    })();
+</script>
