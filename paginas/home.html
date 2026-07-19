@@ -51,9 +51,19 @@
 </style>
 
 <script>
-    (function() {
+    document.addEventListener("DOMContentLoaded", function() {
         const layer = document.getElementById('banner-layer');
+        
+        // Si por alguna razón no encuentra la capa, detenemos el script para evitar errores
+        if (!layer) {
+            console.error("No se encontró el banner-layer");
+            return;
+        }
+
         let i = 1;
+        
+        // Inicializar con la ruta relativa que sabemos que te funciona
+        layer.style.backgroundImage = "url('../images/VINTAGE1.jpg')";
         
         // Función para cambiar imagen con desvanecimiento
         function changeImage() {
@@ -62,15 +72,14 @@
             layer.style.opacity = 0;
             
             setTimeout(() => {
+                // Usamos ../images/ en lugar de /images/
                 layer.style.backgroundImage = `url('../images/VINTAGE${i}.jpg')`;
-                layer.style.opacity = 1; // Luego volvemos a mostrar
+                layer.style.opacity = 1; // Volvemos a mostrar
             }, 1500); // El tiempo coincide con la transición CSS
         }
 
-        // Inicializar
-        layer.style.backgroundImage = "url('../images/VINTAGE1.jpg')";
         setInterval(changeImage, 5000);
-    })();
+    });
 </script>
 
 <!-- Carga de fuente externa para el estilo vintage -->
