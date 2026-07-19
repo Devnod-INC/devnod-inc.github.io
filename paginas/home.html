@@ -1,7 +1,7 @@
 <section id="banner-container" class="hero-banner" style="position: relative; width: 100%; aspect-ratio: 21 / 9; border-radius: 8px; margin-bottom: 40px; overflow: hidden; background: #000;">
     
     <!-- Imagen dinámica controlada por JS -->
-    <img id="banner-img" src="../images/VINTAGE1.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 1.5s ease-in-out;" alt="Vintage">
+    <img id="banner-img" src="../images/VINTAGE1.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 1.5s ease-in-out; display: block;" alt="Vintage">
     
     <!-- Texto encima -->
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 2; background: rgba(0,0,0,0.6);">
@@ -56,16 +56,24 @@
         const imgElement = document.getElementById('banner-img');
         let i = 1;
 
+        // 1. Precargar las imágenes para evitar fallos de carga
+        const images = [];
+        for (let j = 1; j <= 9; j++) {
+            images[j] = new Image();
+            images[j].src = `../images/VINTAGE${j}.jpg`;
+        }
+
+        // 2. Función de rotación
         setInterval(() => {
-            // Desvanecer
+            // Iniciar desvanecimiento
             imgElement.style.opacity = 0;
 
             setTimeout(() => {
                 i = (i % 9) + 1;
                 imgElement.src = `../images/VINTAGE${i}.jpg`;
-                // Aparecer
+                // Reaparecer
                 imgElement.style.opacity = 1;
-            }, 1500); // Tiempo de la transición CSS
+            }, 1500); 
         }, 5000);
     })();
 </script>
