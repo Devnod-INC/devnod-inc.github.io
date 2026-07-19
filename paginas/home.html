@@ -60,7 +60,7 @@
         const images = [];
         for (let j = 1; j <= 9; j++) {
             images[j] = new Image();
-            images[j].src = `../images/VINTAGE${j}.jpg`;
+            images[j].src = `/images/VINTAGE${j}.jpg`;
         }
 
         // 2. Función de rotación
@@ -70,7 +70,7 @@
 
             setTimeout(() => {
                 i = (i % 9) + 1;
-                imgElement.src = `../images/VINTAGE${i}.jpg`;
+                imgElement.src = `/images/VINTAGE${i}.jpg`;
                 // Reaparecer
                 imgElement.style.opacity = 1;
             }, 1500); 
