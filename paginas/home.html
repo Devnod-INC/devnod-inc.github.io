@@ -65,14 +65,15 @@
 <script>
     (function() {
         const container = document.getElementById('carousel-images');
-        
-        // Cargamos solo la primera imagen para probar la ruta
-        container.innerHTML = `
-            <div class="carousel-item active">
-                <img src="../images/VINTAGE1.jpg" class="d-block w-100" alt="Vintage 1">
-            </div>
-        `;
-        console.log("Cargando imagen: ../images/VINTAGE1.jpg");
+        for (let i = 1; i <= 9; i++) {
+            const activeClass = (i === 1) ? 'active' : '';
+            // Usamos un div con background-image, tal como funcionaba tu banner original
+            container.innerHTML += `
+                <div class="carousel-item ${activeClass} hero-banner" 
+                     style="background-image: url('../images/VINTAGE${i}.jpg');">
+                </div>
+            `;
+        }
     })();
 </script>
 
