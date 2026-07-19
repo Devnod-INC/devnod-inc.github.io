@@ -62,13 +62,13 @@
             layer.style.opacity = 0;
             
             setTimeout(() => {
-                layer.style.backgroundImage = `url('/images/VINTAGE${i}.jpg')`;
+                layer.style.backgroundImage = `url('../images/VINTAGE${i}.jpg')`;
                 layer.style.opacity = 1; // Luego volvemos a mostrar
             }, 1500); // El tiempo coincide con la transición CSS
         }
 
         // Inicializar
-        layer.style.backgroundImage = "url('/images/VINTAGE1.jpg')";
+        layer.style.backgroundImage = "url('../images/VINTAGE1.jpg')";
         setInterval(changeImage, 5000);
     })();
 </script>
