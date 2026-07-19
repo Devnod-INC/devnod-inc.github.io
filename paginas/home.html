@@ -56,22 +56,26 @@
         const imgElement = document.getElementById('banner-img');
         let i = 1;
 
-        // 1. Precargar las imágenes para evitar fallos de carga
+        // Construcción de la ruta dinámica basada en la ubicación actual
+        // window.location.origin es https://devnod-inc.github.io
+        const baseUrl = window.location.origin; 
+        
+        // 1. Precargar
         const images = [];
         for (let j = 1; j <= 9; j++) {
             images[j] = new Image();
-            images[j].src = `/images/VINTAGE${j}.jpg`;
+            // Esto apunta directo al dominio raíz
+            images[j].src = `${baseUrl}/images/VINTAGE${j}.jpg`;
+            console.log("Precargando:", images[j].src); // Míralo en la consola F12
         }
 
-        // 2. Función de rotación
+        // 2. Rotación
         setInterval(() => {
-            // Iniciar desvanecimiento
             imgElement.style.opacity = 0;
-
             setTimeout(() => {
                 i = (i % 9) + 1;
-                imgElement.src = `/images/VINTAGE${i}.jpg`;
-                // Reaparecer
+                imgElement.src = `${baseUrl}/images/VINTAGE${i}.jpg`;
+                console.log("Cambiando a:", imgElement.src);
                 imgElement.style.opacity = 1;
             }, 1500); 
         }, 5000);
