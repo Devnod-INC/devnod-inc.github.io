@@ -1,8 +1,27 @@
 <!-- Estructura del Carrusel -->
 <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carousel-images">
-        <!-- El JS inyectará las 9 imágenes aquí -->
-    </div>
+    <!-- Prueba de diagnóstico -->
+<div style="padding: 20px; background: #222; color: #fff;">
+    <h3>Diagnóstico de Ruta:</h3>
+    
+    <!-- Prueba 1: Ruta relativa -->
+    <p>Prueba 1 (../images/VINTAGE1.jpg): 
+       <img src="../images/VINTAGE1.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="width:100px;">
+       <span style="display:none; color:red;">[FALLÓ]</span>
+    </p>
+
+    <!-- Prueba 2: Ruta desde raíz -->
+    <p>Prueba 2 (/images/VINTAGE1.jpg): 
+       <img src="/images/VINTAGE1.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="width:100px;">
+       <span style="display:none; color:red;">[FALLÓ]</span>
+    </p>
+    
+    <!-- Prueba 3: Ruta local directa -->
+    <p>Prueba 3 (images/VINTAGE1.jpg): 
+       <img src="images/VINTAGE1.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="width:100px;">
+       <span style="display:none; color:red;">[FALLÓ]</span>
+    </p>
+</div>
     
     <!-- Overlay con el mensaje de marca -->
     <div class="hero-overlay">
