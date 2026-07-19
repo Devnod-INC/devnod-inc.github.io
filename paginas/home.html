@@ -1,7 +1,8 @@
 <section id="banner-container" class="hero-banner" style="position: relative; width: 100%; aspect-ratio: 21 / 9; border-radius: 8px; margin-bottom: 40px; overflow: hidden; background: #000;">
-    <!-- Esta es la capa que llevará la imagen -->
-    <div id="banner-layer" style="width: 100%; height: 100%; background-size: cover; background-position: center; transition: opacity 1.5s ease-in-out;"></div>
+    <!-- FORZAMOS LA CARGA: Ponemos la imagen aquí mismo -->
+    <img src="../images/VINTAGE1.jpg" alt="Vintage" style="width: 100%; height: 100%; object-fit: cover;">
     
+    <!-- Texto encima -->
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 2; background: rgba(0,0,0,0.6);">
         <div style="text-align: center; color: white;">
             <h2 style="font-family: 'Courier Prime', monospace; font-size: 2.5rem;">Brindando servicios desde 2004</h2>
@@ -48,13 +49,6 @@
     .hero-content { text-align: center; color: white; }
     .banner-text { font-family: 'Courier Prime', monospace; font-size: 2.5rem; }
 </style>
-
-<script>
-    // Inyección directa y simple
-    const layer = document.getElementById('banner-layer');
-    layer.style.backgroundImage = "url('/images/VINTAGE1.jpg')";
-    console.log("Script ejecutado: URL aplicada a", layer);
-</script>
 
 <!-- Carga de fuente externa para el estilo vintage -->
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
