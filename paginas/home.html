@@ -1,8 +1,15 @@
-<section class="hero-banner">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h2 id="hero-title" class="fade-in">Software e Infraestructura para Empresas.</h2>
-        <p id="hero-subtitle">Desarrollo a medida, acceso seguro y respaldo de datos.</p>
+<!-- Estructura del Carrusel -->
+<section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" id="carousel-images">
+        <!-- El JS inyectará las 9 imágenes aquí -->
+    </div>
+    
+    <!-- Overlay con el mensaje de marca -->
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h2 class="banner-text">Brindando servicios desde 2004</h2>
+            <p>Infraestructura y Software para tu Crecimiento.</p>
+        </div>
     </div>
 </section>
 
@@ -13,52 +20,58 @@
 
 <style>
     /* Estilos del componente */
-    .hero-banner {
-        position: relative;
+    #heroCarousel {
         width: 100%;
         aspect-ratio: 21 / 9;
-        background-image: url('../images/devnod_banner.png');
-        background-size: cover;
-        background-position: center;
         border-radius: 8px;
         margin-bottom: 40px;
-        
-        /* Centrado con Flexbox */
-        display: flex;
-        align-items: center;
-        justify-content: center;
         overflow: hidden;
+        position: relative;
+    }
+    
+    .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
 
     .hero-overlay {
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
         background: rgba(0, 0, 0, 0.6);
-        z-index: 1;
+        z-index: 2; /* Encima de las imágenes */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none; /* Permite hacer clic a través si fuera necesario */
     }
     
     .hero-content {
-        position: relative;
-        z-index: 2;
         text-align: center;
-        width: 100%; /* Asegura que ocupe todo el ancho del banner */
-        padding: 20px;
-        display: flex; /* Añadimos flex para alinear en columna */
-        flex-direction: column;
-        align-items: center; /* Alinea hijos al centro horizontalmente */
+        color: white;
     }
     
-    .hero-content h2 {
-        color: #ffffff;
-        font-size: 3rem;
-        margin: 0 0 10px 0;
-        max-width: 80%; /* Evita que el texto sea muy ancho */
-    }
-    
-    .hero-content p {
-        color: #e6edf3;
-        font-size: 1.25rem;
-        margin: 0;
-        max-width: 80%;
+    .banner-text {
+        font-family: 'Courier Prime', monospace;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
 </style>
+
+<script>
+    (function() {
+        const container = document.getElementById('carousel-images');
+        // Genera los 9 items de forma dinámica
+        for (let i = 1; i <= 9; i++) {
+            const activeClass = (i === 1) ? 'active' : '';
+            container.innerHTML += `
+                <div class="carousel-item ${activeClass}">
+                    <img src="images/VINTAGE${i}.jpg" class="d-block w-100" alt="Vintage ${i}">
+                </div>
+            `;
+        }
+    })();
+</script>
+
+<!-- Carga de fuente externa para el estilo vintage -->
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
