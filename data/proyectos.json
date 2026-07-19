@@ -11,7 +11,7 @@
     "id": "nod-001",
     "nombre": "Calculadora IPv6 Profesional",
     "url": "https://sloty00.github.io/Calculadora-IPv6/",
-    "stack": ["FastAPI", "Python-Core", "CI-CD-Actions", "Networking"],
+    "stack": ["FastAPI", "Python-Core", "GitHub-Actions", "Networking"],
     "descripcion": "Middleware de red de alto rendimiento para segmentación IPv6. Implementa validación estricta, arquitectura desacoplada con FastAPI y pipeline automatizado de pruebas unitarias.",
     "estado": "Activo"
   },
