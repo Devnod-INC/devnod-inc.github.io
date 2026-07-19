@@ -1,13 +1,28 @@
-<section id="banner-container" class="hero-banner" style="position: relative; width: 100%; aspect-ratio: 21 / 9; border-radius: 8px; margin-bottom: 40px; overflow: hidden; background: #000;">
-    
-    <!-- Imagen dinámica controlada por JS -->
-    <img id="banner-img" src="../images/VINTAGE1.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 1.5s ease-in-out; display: block;" alt="Vintage">
-    
-    <!-- Texto encima -->
+<section id="banner-container" style="position: relative; width: 100%; border-radius: 8px; margin-bottom: 40px; overflow: hidden;">
+    <!-- Carrusel de Bootstrap -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <!-- Imagen 1 -->
+            <div class="carousel-item active">
+                <img src="/images/VINTAGE1.jpg" class="d-block w-100" alt="Vintage 1" style="aspect-ratio: 21 / 9; object-fit: cover;">
+            </div>
+            <!-- Imágenes 2 a 9 -->
+            <div class="carousel-item"><img src="/images/VINTAGE2.jpg" class="d-block w-100" alt="Vintage 2" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+            <div class="carousel-item"><img src="/images/VINTAGE3.jpg" class="d-block w-100" alt="Vintage 3" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+            <div class="carousel-item"><img src="/images/VINTAGE4.jpg" class="d-block w-100" alt="Vintage 4" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+            <div class="carousel-item"><img src="/images/VINTAGE5.jpg" class="d-block w-100" alt="Vintage 5" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+            <div class="carousel-item"><img src="/images/VINTAGE6.jpg" class="d-block w-100" alt="Vintage 6" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+            <div class="carousel-item"><img src="/images/VINTAGE7.jpg" class="d-block w-100" alt="Vintage 7" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+            <div class="carousel-item"><img src="/images/VINTAGE8.jpg" class="d-block w-100" alt="Vintage 8" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+            <div class="carousel-item"><img src="/images/VINTAGE9.jpg" class="d-block w-100" alt="Vintage 9" style="aspect-ratio: 21 / 9; object-fit: cover;"></div>
+        </div>
+    </div>
+
+    <!-- Capa de texto (Overlay) -->
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 2; background: rgba(0,0,0,0.6);">
         <div style="text-align: center; color: white;">
-            <h2 style="font-family: 'Courier Prime', monospace; font-size: 2.5rem;">Brindando servicios desde 2004</h2>
-            <p>Infraestructura y Software para tu Crecimiento.</p>
+            <h2 style="font-family: 'Courier Prime', monospace; font-size: 2.5rem; margin-bottom: 10px;">Brindando servicios desde 2004</h2>
+            <p style="font-size: 1.2rem;">Infraestructura y Software para tu Crecimiento.</p>
         </div>
     </div>
 </section>
@@ -18,69 +33,43 @@
 </section>
 
 <style>
-.hero-banner {
+/* Contenedor principal que mantiene el formato 21/9 */
+    .hero-banner {
         position: relative;
         width: 100%;
-        aspect-ratio: 21 / 9;
         border-radius: 8px;
         margin-bottom: 40px;
-        overflow: hidden; /* Importante para que la imagen no se salga */
+        overflow: hidden;
         background: #000;
     }
 
-    .banner-layer {
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background-size: cover;
-        background-position: center;
-        transition: opacity 1.5s ease-in-out; /* Esta es la clave de la transición */
-        z-index: 1;
+    /* Ajuste para que todas las imágenes del carrusel tengan el mismo tamaño */
+    .carousel-item img {
+        aspect-ratio: 21 / 9;
+        object-fit: cover;
     }
 
+    /* Capa oscura para que el texto sea legible */
     .hero-overlay {
         position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0;
         background: rgba(0, 0, 0, 0.6);
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 2;
     }
-    
-    .hero-content { text-align: center; color: white; }
-    .banner-text { font-family: 'Courier Prime', monospace; font-size: 2.5rem; }
+
+    /* Estilo del texto */
+    .hero-content {
+        text-align: center;
+        color: white;
+        font-family: 'Courier Prime', monospace;
+    }
 </style>
-
-<script>
-    (function() {
-        const imgElement = document.getElementById('banner-img');
-        let i = 1;
-
-        // Construcción de la ruta dinámica basada en la ubicación actual
-        // window.location.origin es https://devnod-inc.github.io
-        const baseUrl = window.location.origin; 
-        
-        // 1. Precargar
-        const images = [];
-        for (let j = 1; j <= 9; j++) {
-            images[j] = new Image();
-            // Esto apunta directo al dominio raíz
-            images[j].src = `${baseUrl}/images/VINTAGE${j}.jpg`;
-            console.log("Precargando:", images[j].src); // Míralo en la consola F12
-        }
-
-        // 2. Rotación
-        setInterval(() => {
-            imgElement.style.opacity = 0;
-            setTimeout(() => {
-                i = (i % 9) + 1;
-                imgElement.src = `${baseUrl}/images/VINTAGE${i}.jpg`;
-                console.log("Cambiando a:", imgElement.src);
-                imgElement.style.opacity = 1;
-            }, 1500); 
-        }, 5000);
-    })();
-</script>
 
 <!-- Carga de fuente externa para el estilo vintage -->
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
